@@ -6,6 +6,7 @@
 
 # Get attachment from MAIL 
 library(mRpostman) # An IMAP Client for R, CRAN v1.0.0
+library(here) 
 
 # Set dir 
 setwd(here::here("rawdata/gps_mail")) 
@@ -24,6 +25,7 @@ con$select_folder(name = "INBOX")
 con$search_string(expr = "support@digitanimal.com", where = "FROM") %>% 
   con$fetch_body(write_to_disk = TRUE) %>% 
   con$get_attachments(override = TRUE)
+
 
 
 
