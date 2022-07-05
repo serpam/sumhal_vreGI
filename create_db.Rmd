@@ -1,0 +1,125 @@
+---
+title: "create_database"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Creación Base de Datos
+
+- Creamos una base de datos SQLite 
+
+```{r}
+library(RSQLite)
+library(tidyverse)
+library(xlsx)
+library(here)
+```
+
+
+Leer diccionario de datos
+
+```{r}
+dicc_ganaderos <- readxl::read_excel(here::here("db/dicc_gps.xlsx"), sheet = "dicc_ganaderos")
+dicc_dispositivos <- readxl::read_excel(here::here("db/dicc_gps.xlsx"), sheet = "dicc_dispositivos")
+dicc_explotaciones <- readxl::read_excel(here::here("db/dicc_gps.xlsx"), sheet = "dicc_explotaciones")
+```
+
+# Crear base de datos y tablas
+
+```{r}
+con <- dbConnect(RSQLite::SQLite(), dbname = here::here("db/db_gps.db"))
+```
+
+
+## Diccionario Ganaderos 
+
+<!-- see https://community.rstudio.com/t/create-sqlite-table-with-primary-key-in-r/93634/2 -->
+
+Creo la tabla `dicc_ganaderos` y especifico el campo `id_ganadero` como KEY. Ojo, no utilizo el nombre del ganadero por Ley Protección de Datos. 
+
+```{r, eval=FALSE}
+sql_statement <- sprintf("CREATE TABLE %s(%s, PRIMARY KEY(%s))", "dicc_ganaderos",
+        paste(names(dicc_ganaderos), collapse =", "), 
+        names(dicc_ganaderos)[1])
+
+dbExecute(conn=con, statement=sql_statement)
+dbWriteTable(con, "dicc_ganaderos", dicc_ganaderos, append = TRUE, row.names = FALSE)
+``` 
+
+## Diccionario Explotaciones 
+
+Creo la tabla `dicc_explotaciones` y especifico el campo `id_ganadero` como FOREING KEY de la tabla `dicc_ganaderos`. 
+
+```{r, eval=FALSE}
+sql_statement <- sprintf("CREATE TABLE %s(%s, FOREIGN KEY(%s) REFERENCES %s(%s))", "dicc_explotaciones",
+        paste(names(dicc_explotaciones), collapse =", "), 
+        names(dicc_explotaciones)[1], "dicc_ganaderos", 
+        names(dicc_ganaderos)[1])
+
+dbExecute(conn=con, statement=sql_statement)
+dbWriteTable(con, "dicc_explotaciones", dicc_explotaciones, append = TRUE, row.names = FALSE)
+``` 
+
+## Diccionario Dispositivos
+
+Creo la tabla `dicc_dispositivos` y especifico el campo `codigo_gps` como KEY. Incluyo el campo `id_ganadero` como FOREING KEY de la tabla `dicc_ganaderos` 
+
+```{r, eval=FALSE}
+sql_statement <- sprintf("CREATE TABLE %s(%s, PRIMARY KEY (%s) FOREIGN KEY(%s) REFERENCES %s(%s))",
+                         "dicc_dispositivos",
+                         paste(names(dicc_dispositivos), collapse =", "), 
+                         names(dicc_dispositivos)[4], 
+                         names(dicc_dispositivos)[2],
+                         "dicc_ganaderos", 
+                         names(dicc_ganaderos)[1])
+
+dbExecute(conn=con, statement=sql_statement)
+dbWriteTable(con, "dicc_dispositivos", dicc_dispositivos, append = TRUE, row.names = FALSE)
+``` 
+
+## Tabla datos_gps 
+
+Creo la tabla `datos_gps`. Incluyo el campo `codigo_gps` como FOREIGN KEY de la tabla `dicc_dispositivos` 
+
+```{r, eval=FALSE}
+sql_statement <- "CREATE TABLE datos_gps(codigo_gps,
+                      id_itm INTEGER, 
+                      id_user INTEGER, 
+                      lat,
+                      lng, 
+                      time_stamp DATETIME,
+                      month INTEGER,
+                      FOREIGN KEY(codigo_gps) REFERENCES dicc_dispositivos(codigo_gps))"
+
+
+dbExecute(conn=con, statement=sql_statement)
+```
+
+
+
+
+```{r}
+
+f <- dbGetQuery(con, "SELECT datetime(time_stamp, 'unixepoch') FROM datos_gps WHERE time_stamp =1651363255;")
+
+ff <- dbGetQuery(con, "SELECT * FROM datos_gps WHERE datetime(time_stamp, 'unixepoch') BETWEEN '2022-05-01 00:00:00' AND
+                 '2022-05-01 00:01:00'")
+
+fff <- dbGetQuery(con, 
+                  "SELECT codigo_gps,id_itm,id_user,lat,lng,datetime(time_stamp, 'unixepoch') as datetime, month FROM datos_gps
+WHERE datetime(time_stamp, 'unixepoch') BETWEEN '2022-05-01 00:00:00' AND '2022-05-01 00:01:00'" 
+)
+
+```
+
+
+
+
+
+
