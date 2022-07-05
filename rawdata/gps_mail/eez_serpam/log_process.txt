@@ -1,0 +1,72 @@
+## Log date 2022-05-03 15:27:05
+## Files processed: 14
+### IDs of the files processed: 
+3508 22022.zip, 1270 22022.zip, 8866 22022.zip, 8868 22022.zip, 8871 22022.zip, 8870 22022.zip, 8872 22022.zip, 8876 22022.zip, 8875 22022.zip, 8869 22022.zip, 8874 22022.zip, 8877 22022.zip, 8873 22022.zip, 8867 22022.zip
+
+## Date period: 2022_02
+### First record date: 2022-02-01 00:00:26 
+### Last record date: 2022-03-01 12:25:53
+
+## GPS devices processed: 38 
+## Users devices: 14 users
+## 25522 records were processed
+
+### GPS devices:
+AT235, AF382, AN868, AN867, AV342, AV341, AV782, AV781, AV338, AV337, AO771, AV277, AV276, AV278, AV279, AV274, AV273, AV275, AV332, AV333, AV330, AV335, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU156, AV272, AU597, AV343, AV344, AV451, AV286, AU636, AV345
+
+### Output data: rawdata/gps_mail/all_gps_2022_02.csv 
+=============================================================
+## Log date 2022-05-03 15:27:13
+## Files processed: 14
+### IDs of the files processed: 
+8868 32022.zip, 8870 32022.zip, 8869 32022.zip, 8867 32022.zip, 8877 32022.zip, 8871 32022.zip, 8872 32022.zip, 8874 32022.zip, 8873 32022.zip, 3508 32022.zip, 1270 32022.zip, 8876 32022.zip, 8866 32022.zip, 8875 32022.zip
+
+## Date period: 2022_03
+### First record date: 2022-03-01 00:02:14 
+### Last record date: 2022-03-31 23:54:01
+
+## GPS devices processed: 37 
+## Users devices: 14 users
+## 25266 records were processed
+
+### GPS devices:
+AV781, AV782, AT235, AF382, AN868, AN867, AV338, AV337, AO771, AV277, AV276, AV279, AV278, AV275, AV273, AV274, AV332, AV333, AV330, AV334, AV335, AV451, AV336, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636
+
+### Output data: rawdata/gps_mail/all_gps_2022_03.csv 
+=============================================================
+## Log date 2022-05-03 15:27:23
+## Files processed: 14
+### IDs of the files processed: 
+3508 42022.zip, 1270 42022.zip, 8867 42022.zip, 8868 42022.zip, 8866 42022.zip, 8869 42022.zip, 8875 42022.zip, 8876 42022.zip, 8872 42022.zip, 8871 42022.zip, 8873 42022.zip, 8877 42022.zip, 8870 42022.zip, 8874 42022.zip
+
+## Date period: 2022_04
+### First record date: 2022-04-01 00:01:24 
+### Last record date: 2022-05-01 00:00:55
+
+## GPS devices processed: 36 
+## Users devices: 14 users
+## 25820 records were processed
+
+### GPS devices:
+AN867, AT235, AV781, AV782, AN868, AO771, AV338, AV337, AV277, AV276, AV279, AV278, AV273, AV275, AV274, AV333, AV330, AV332, AV336, AV334, AV335, AV451, AV340, AV339, AT684, AS046, AV283, AV285, AV272, AU156, AU597, AV344, AV343, AV286, AU636, AV345
+
+### Output data: rawdata/gps_mail/all_gps_2022_04.csv 
+=============================================================
+## Log date 2022-07-05 11:39:37
+## Files processed: 14
+### IDs of the files processed: 
+8868 52022.zip, 8867 52022.zip, 1270 52022.zip, 8870 52022.zip, 8875 52022.zip, 8872 52022.zip, 8871 52022.zip, 8874 52022.zip, 8869 52022.zip, 8877 52022.zip, 8876 52022.zip, 8866 52022.zip, 3508 52022.zip, 8873 52022.zip
+
+## Date period: 2022_05
+### First record date: 2022-05-01 00:00:55 
+### Last record date: 2022-06-01 07:11:11
+
+## GPS devices processed: 37 
+## Users devices: 14 users
+## 26493 records were processed
+
+### GPS devices:
+AV782, AV781, AT235, AN868, AN867, AV338, AV337, AO772, AO771, AV277, AV276, AV278, AV279, AV275, AV273, AV274, AV332, AV330, AV333, AV336, AV335, AV451, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU597, AV272, AU156, AV343, AV344, AV286, AU636, AV345
+
+### Output data: rawdata/gps_mail/all_gps_2022_05.csv 
+=============================================================
