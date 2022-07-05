@@ -18,9 +18,14 @@ conn <- dbConnect(RSQLite::SQLite(), dbname = here::here("db/db_gps.db"))
 # Custom function to append data into database
 appendGPStoDB <- function(file, conn, table){ 
   
-  gps_new <- read_csv(file) %>% 
-    rename(codigo_gps = id_collar) %>% 
-    as.data.frame()
+  aux_data <- read_csv(file) 
+  
+  # Evaluate if the df has the column name "id_collar"
+  if ("id_collar" %in% names(aux_data)) {
+    gps_new <- aux_data %>% rename(codigo_gps = id_collar) 
+  } else {
+    gps_new <- aux_data
+  }
   
   # Tenemos problemas con ceros en lat, long, y otras que presentan latitudes y 
   # longitudes algo extrañas. Solución --> filtrar por bbox (he creado un bbox de la P. Iberica)
@@ -64,14 +69,20 @@ appendGPStoDB <- function(file, conn, table){
 }
 
 
-
-
-
+#### Datos de GPS from MAIL 
 
 myfile <- here::here("rawdata/gps_mail/all_gps_2022_05.csv")
 
 appendGPStoDB(file = myfile, conn = conn, table = "datos_gps") 
 
+#### Datos de GPS mc 
+
+myfile <- here::here("rawdata/gps_mc/220601_Datos.csv")
+
+appendGPStoDB(file = myfile, conn = conn, table = "datos_gps") 
+
+
+# End connection 
 RSQLite::dbDisconnect(conn)
 
 
@@ -85,6 +96,17 @@ RSQLite::dbDisconnect(conn)
 
 
 
+id_collar 
+
+df_id_collar <- data.frame(hola = 0,
+                           id_collar = 0)
+df_no <- data.frame(hola = 0,
+                           cod_gps = 0)
+
+
+if ("id_collar" %in% names(df_id_collar)) {
+  print("yeah")
+} 
 
 
 
