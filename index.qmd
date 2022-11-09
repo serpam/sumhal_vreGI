@@ -1,0 +1,22 @@
+---
+title: "Grazing Intensity VRE (Virtual Research Environment)"
+---
+
+## Introducción 
+
+Uno de los objetivos dentro del proyecto SUMHAL (*Sustainability for Mediterranean Hotspots in Andalusia integrating LifeWatch ERIC*) consiste en analizar el papel de las prácticas silvopastorales en la conservación. Para ello, en el paquete de trabajo WP7 (*Mejora de la sostenibilidad de los bosques mediterráneos y los agrosistemas silvopastorales bajo el cambio climático*), existen dos subproyectos: *Papel de las prácticas silvopastorales en la conservación* (LWE2103026), y *Geodatabase, modelo espacial e Integración en entornos virtuales de investigación* (LWE2103027), dedicados a realizar este análisis.
+
+Un aspecto fundamental para analizar el papel de las prácticas silvopastorales en la conservación de la biodiversidad, consiste en el conocimiento de la distribución y la intensidad del pastoreo en las diferentes áreas de interés. Para ello se están utilizando diferentes dispositivos de seguimiento GPS para el ganado, de forma que se pueda conocer el área de pastoreo de una determinada ganadería así como la intensidad de pastoreo. De esta forma nace la necesidad de gestionar grandes volúmnenes de datos derivados del seguimiento GPS del ganado, para lo cual se ha pensado en el dearrollo de una aplicación o Laboratorio Virtual (VRE, *Virtual Research Environment*) que posibilite el manejo de estos datos 
+
+## Descripción de la aplicación
+
+La aplicación consta de diferentes apartados relacionados con las tareas que realiza: 
+
+- Colecta de datos 
+
+- Integración de datos en base de datos
+
+- Visualización
+
+- Análisis 
+

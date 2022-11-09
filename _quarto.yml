@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Grazing Intensity VRE (Virtual Research Environment)"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - icon: github
+        href: https://github.com/serpam/rpasveg_alcontar
+        aria-label: GitHub repo 
+      - icon: twitter
+        href: https://twitter.com/SERPAM_EEZ
+        aria-label: SERPAM Twitter
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
