@@ -1,0 +1,133 @@
+---
+title: "Quality control"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+library(RSQLite)
+library(here)
+```
+
+# Control de calidad de los datos
+
+## Eliminación de datos previos al setup de los GPS
+
+* Se realiza una visualización espacial de los datos, y existen datos desde que se inicializaron los dispositivos hasta su puesta en campo. 
+
+* Para eliminar los datos realizamos una visualización por ganadero, y eliminamos los primeros días de acuerdo a la siguiente tabla (se eliminan los datos hasta la fecha indicada inclusive): 
+
+```{r, echo=FALSE}
+d <- data.frame(ganaderia = c('SNE-1','SNE-2','SNE-3','SNE-4','SNE-5','SNE-6',
+                              'CG-1','CG-2','CG-3','FIL-1','FIL-2',
+                              'SNI-1','SNI-2','SNI-3','SNI-4'),
+                fecha = c("2022-01-27","2022-01-26","2022-01-27","2022-01-26",
+                          "2022-01-27",NA,"2022-01-22","2022-01-22",
+                          "2022-01-22",NA,"2022-02-10","2022-01-29",
+                          "2022-02-05",NA,"2022-01-28"
+                          ),
+                comment = c(NA,
+                            rep("Existen algunos datos erróneos posteriores. Revisar",3),
+                            NA,"Revisar el estado de esta ganadería",
+                            NA,"Existen algunos datos erróneos posteriores. Revisar",NA,
+                            "Los datos no están incluidos. Son datos Satelitates. Incluir",
+                            "Existen algunos datos erróneos posteriores. Revisar",
+                            NA,"Existen algunos datos erróneos posteriores. Revisar","Los datos están OK",NA))
+
+```
+
+```{r, echo=FALSE}
+options(knitr.kable.NA = '')
+d %>% 
+  kbl() %>%
+  kable_styling()
+```
+
+Para la eliminación de estos datos (solo se realiza una vez) procedemos a realizar diferentes consultas SQL 
+
+
+```{r}
+# OJO es un DELETE ROWs 
+d$query_deleted <- NA
+d$query_nrows <- NA 
+
+s <- "strftime(\'%s\',"
+ganaderos <- d$ganaderia
+
+for (ganadero in ganaderos) { 
+  
+  f <- paste0("\'", d[d$ganaderia == ganadero,]$fecha, " 00:00:00\')")
+  
+  # Esto es para contar cuantas filas voy a eliminar 
+  query_nrows <- glue::glue('SELECT datos_gps.*, DATETIME(datos_gps.time_stamp, \'unixepoch\') as date, dicc_dispositivos.id_ganadero as id_ganadero FROM datos_gps, dicc_dispositivos WHERE datos_gps.codigo_gps == dicc_dispositivos.codigo_gps AND dicc_dispositivos.id_ganadero LIKE {paste0("\'",ganadero,"\'")} AND datos_gps.time_stamp < {paste0(s,f)}')
+              
+  query_deleted <- glue::glue('
+             DELETE FROM datos_gps WHERE datos_gps.id IN (SELECT datos_gps.id FROM datos_gps, dicc_dispositivos  WHERE datos_gps.codigo_gps == dicc_dispositivos.codigo_gps AND dicc_dispositivos.id_ganadero LIKE {paste0("\'",ganadero,"\'")} AND datos_gps.time_stamp < {paste0(s,f)});')
+        
+  d[d$ganaderia == ganadero,]$query_nrows <- query_nrows
+  d[d$ganaderia == ganadero,]$query_deleted <- query_deleted
+}
+```
+
+
+
+```{r}
+con <- dbConnect(RSQLite::SQLite(), dbname = here::here("db/db_gps.db"))
+
+### Code to log and track the changes 
+aux <- d %>% 
+  filter(!is.na(fecha)) %>% 
+  dplyr::select(query_nrows) %>% pull() %>% 
+  purrr::map( ~ dbGetQuery(con, .x))
+
+file_log <- here::here(here(), "db/log_qc.txt") 
+
+log_qc_delete <- function(x, file_log){ 
+  
+  # To create log file the first time 
+  if(!(file.exists(file_log))){
+    file.create(file_log)
+  }
+  
+  # Log
+  momentum <- Sys.time()
+  texto <- glue::glue('
+  ## Log date {momentum}
+  ## Action: DELETE ROWS 
+  ## Details: 
+  ## - {nrow(x)} records from {unique(x$id_ganadero)} were deleted
+  ## - Reason: Error in the start-up date of GPS devices 
+  ## - Dates removed: From {min(x$date)} to {max(x$date)}
+  ## - The records belong to the following GPS devices:
+  ## {glue::glue_collapse(unique(x$codigo_gps), sep = ", ")}
+  =============================================================')
+  
+  write(texto, file_log, append = TRUE)
+} 
+
+aux %>% purrr::map( ~log_qc_delete(.x, file_log = file_log))
+
+### Code to DELETE the specified rows in the db 
+
+aux <- d %>% 
+  filter(!is.na(fecha)) %>% 
+  dplyr::select(query_deleted) %>% pull() %>% 
+  purrr::map( ~ dbGetQuery(con, .x))
+```
+
+
+
+
+
+
+  
+  
+

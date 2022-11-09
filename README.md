@@ -10,5 +10,3 @@ We used GPS data coming from several kinds of GPS devices:
   - **continuous measurement** (***mc***). The position is registered each 5 mins and stored in a SD-card. Data need to be manually downloaded every three months.
   - **SIGFOX** (***sigfox***) and **GSM** (***gsm***): Position is registered at 30-mins intervals and sent using SIGFOX or GSM technology respectively. 
 
-
-

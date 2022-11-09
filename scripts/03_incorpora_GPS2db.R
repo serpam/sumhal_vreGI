@@ -75,6 +75,14 @@ myfile <- here::here("rawdata/gps_mail/all_gps_2022_05.csv")
 
 appendGPStoDB(file = myfile, conn = conn, table = "datos_gps") 
 
+
+### Mejorar esto (es para incorporarlos de una vez )
+filitas <- list.files(path = here::here("rawdata/gps_mail"),
+                      full.names = TRUE, pattern = "*.csv")
+
+filitas %>% purrr::map(~ appendGPStoDB(file = .x, conn = conn, table = "datos_gps"))
+### ---- 
+
 #### Datos de GPS mc 
 
 myfile <- here::here("rawdata/gps_mc/220601_Datos.csv")
@@ -84,55 +92,3 @@ appendGPStoDB(file = myfile, conn = conn, table = "datos_gps")
 
 # End connection 
 RSQLite::dbDisconnect(conn)
-
-
-
-
-
-
-
-
-
-
-
-
-id_collar 
-
-df_id_collar <- data.frame(hola = 0,
-                           id_collar = 0)
-df_no <- data.frame(hola = 0,
-                           cod_gps = 0)
-
-
-if ("id_collar" %in% names(df_id_collar)) {
-  print("yeah")
-} 
-
-
-
-
-
-
-gps_new <- read_csv(myfile) %>%
-  rename(codigo_gps = id_collar) %>% 
-  as.data.frame()
-
-# Tenemos problemas con ceros en lat, long, y otras que presentan latitudes y 
-# longitudes algo extrañas. Solución --> filtrar por bbox (he creado un bbox de la P. Iberica)
-
-# Define the bounding box to filter out data 
-long_min = -9.49982
-long_max = 3.352826
-lat_min = 35.978678
-lat_max = 43.9933088
-
-g <- gps_new %>% 
-  filter(between(lng, long_min, long_max)) %>% 
-  filter(between(lat, lat_min, lat_max))
-
-gps_new <- read_csv(here::here("rawdata/gps_mail/all_gps_2022_04.csv")) %>% 
-  rename(codigo_gps = id_collar)
-
-dbWriteTable(con, "datos_gps", gps_new, append = TRUE, row.names = FALSE)
-
-

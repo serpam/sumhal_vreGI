@@ -1,0 +1,120 @@
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 556 records from SNE-1 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 19:18:42 to 2022-01-26 23:58:50
+## - The records belong to the following GPS devices:
+## AV597, AV598, AV599
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 528 records from SNE-2 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 17:44:04 to 2022-01-25 16:03:35
+## - The records belong to the following GPS devices:
+## AV600, AV601, AV602, AV603
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 769 records from SNE-3 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 19:44:00 to 2022-01-26 23:59:54
+## - The records belong to the following GPS devices:
+## AV604, AV605, AV606
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 754 records from SNE-4 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 17:44:46 to 2022-01-25 23:58:12
+## - The records belong to the following GPS devices:
+## AV607, AV608, AV609
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 431 records from SNE-5 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 19:28:45 to 2022-01-26 23:59:43
+## - The records belong to the following GPS devices:
+## AV610, AV612
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 762 records from CG-1 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 17:45:12 to 2022-01-21 23:59:58
+## - The records belong to the following GPS devices:
+## AV572, AV573, AV574
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 1065 records from CG-2 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 17:44:31 to 2022-01-21 23:58:49
+## - The records belong to the following GPS devices:
+## AV576, AV578, AV579, AV577
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 859 records from CG-3 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 19:20:54 to 2022-01-21 23:59:44
+## - The records belong to the following GPS devices:
+## AV581, AV582, AV583
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 8845 records from FIL-2 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 20:59:37 to 2022-02-09 23:56:28
+## - The records belong to the following GPS devices:
+## AU636, AV345, AV616, AV617
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 3100 records from SNI-1 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 19:31:44 to 2022-01-28 23:59:13
+## - The records belong to the following GPS devices:
+## AV571, AV575, AV584, AV585
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 11775 records from SNI-2 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-04 09:56:42 to 2022-02-04 23:59:00
+## - The records belong to the following GPS devices:
+## AV335, AV334, AV586, AV587, AV588, AV589, AV590
+=============================================================
+## Log date 2022-07-07 14:55:56
+## Action: DELETE ROWS 
+## Details: 
+## - 1059 records from SNI-4 were deleted
+## - Reason: Error in the start-up date of GPS devices 
+## - Dates removed: From 2022-01-12 17:44:40 to 2022-01-27 23:57:04
+## - The records belong to the following GPS devices:
+## AV595, AV596
+=============================================================
+
+
+
+
+
+
+
+
+
+
+
+

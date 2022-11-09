@@ -44,6 +44,8 @@ con <- dbConnect(RSQLite::SQLite(), dbname = here::here("db/db_gps.db"))
 Creo la tabla `dicc_ganaderos` y especifico el campo `id_ganadero` como KEY. Ojo, no utilizo el nombre del ganadero por Ley Protección de Datos. 
 
 ```{r, eval=FALSE}
+# %s(%s en la siguiente función hace referencia a cada uno de los argumentos posteriores
+
 sql_statement <- sprintf("CREATE TABLE %s(%s, PRIMARY KEY(%s))", "dicc_ganaderos",
         paste(names(dicc_ganaderos), collapse =", "), 
         names(dicc_ganaderos)[1])
@@ -88,14 +90,14 @@ dbWriteTable(con, "dicc_dispositivos", dicc_dispositivos, append = TRUE, row.nam
 Creo la tabla `datos_gps`. Incluyo el campo `codigo_gps` como FOREIGN KEY de la tabla `dicc_dispositivos` 
 
 ```{r, eval=FALSE}
-sql_statement <- "CREATE TABLE datos_gps(codigo_gps,
+sql_statement <- "CREATE TABLE datos_gps(
+id INTEGER PRIMARY KEY AUTOINCREMENT,codigo_gps,
                       id_itm INTEGER, 
                       id_user INTEGER, 
                       lat,
                       lng, 
                       time_stamp DATETIME,
-                      month INTEGER,
-                      FOREIGN KEY(codigo_gps) REFERENCES dicc_dispositivos(codigo_gps))"
+                      month INTEGER, FOREIGN KEY(codigo_gps) REFERENCES dicc_dispositivos(codigo_gps))"
 
 
 dbExecute(conn=con, statement=sql_statement)
@@ -104,19 +106,13 @@ dbExecute(conn=con, statement=sql_statement)
 
 
 
-```{r}
 
-f <- dbGetQuery(con, "SELECT datetime(time_stamp, 'unixepoch') FROM datos_gps WHERE time_stamp =1651363255;")
 
-ff <- dbGetQuery(con, "SELECT * FROM datos_gps WHERE datetime(time_stamp, 'unixepoch') BETWEEN '2022-05-01 00:00:00' AND
-                 '2022-05-01 00:01:00'")
 
-fff <- dbGetQuery(con, 
-                  "SELECT codigo_gps,id_itm,id_user,lat,lng,datetime(time_stamp, 'unixepoch') as datetime, month FROM datos_gps
-WHERE datetime(time_stamp, 'unixepoch') BETWEEN '2022-05-01 00:00:00' AND '2022-05-01 00:01:00'" 
-)
 
-```
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-## Log date 2022-07-05 14:14:55
+## Log date 2022-07-07 14:19:37
 ## File processed: all_gps_2022_02.csv
 ## Date period: 
 ### First record date: 2022-02-01 00:00:26 
@@ -10,7 +10,7 @@
 ### GPS devices:
 # AT235, AF382, AN868, AN867, AV342, AV341, AV782, AV781, AV338, AV337, AO771, AV277, AV276, AV278, AV279, AV274, AV273, AV275, AV332, AV333, AV330, AV335, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AV272, AU597, AU156, AV343, AV344, AV286, AV451, AU636, AV345
 =============================================================
-## Log date 2022-07-05 14:15:35
+## Log date 2022-07-07 14:19:37
 ## File processed: all_gps_2022_03.csv
 ## Date period: 
 ### First record date: 2022-03-01 00:02:14 
@@ -22,7 +22,7 @@
 ### GPS devices:
 # AV781, AV782, AT235, AF382, AN868, AN867, AV338, AV337, AO771, AV277, AV276, AV279, AV278, AV275, AV273, AV274, AV332, AV333, AV330, AV334, AV335, AV451, AV336, AV340, AV339, AT684, AS046, AV283, AV285, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636
 =============================================================
-## Log date 2022-07-05 14:15:42
+## Log date 2022-07-07 14:19:38
 ## File processed: all_gps_2022_04.csv
 ## Date period: 
 ### First record date: 2022-04-01 00:03:31 
@@ -34,7 +34,7 @@
 ### GPS devices:
 # AN867, AT235, AV781, AV782, AN868, AO771, AV338, AV337, AV276, AV277, AV279, AV278, AV273, AV275, AV274, AV333, AV330, AV332, AV334, AV335, AV451, AV336, AV340, AV339, AT684, AS046, AV283, AV285, AV272, AU597, AU156, AV344, AV343, AV286, AU636, AV345
 =============================================================
-## Log date 2022-07-05 14:15:49
+## Log date 2022-07-07 14:19:38
 ## File processed: all_gps_2022_05.csv
 ## Date period: 
 ### First record date: 2022-05-01 00:00:55 
@@ -46,7 +46,7 @@
 ### GPS devices:
 # AV782, AV781, AT235, AN868, AN867, AV338, AV337, AO772, AO771, AV277, AV276, AV278, AV279, AV275, AV273, AV274, AV332, AV330, AV333, AV335, AV451, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU597, AV272, AU156, AV343, AV344, AV286, AU636, AV345
 =============================================================
-## Log date 2022-07-05 16:34:55
+## Log date 2022-07-07 14:20:09
 ## File processed: 220301_Datos.csv
 ## Date period: 
 ### First record date: 2022-01-04 09:56:42 
@@ -58,7 +58,7 @@
 ### GPS devices:
 # AV571, AV572, AV573, AV574, AV575, AV576, AV578, AV579, AV581, AV582, AV583, AV584, AV585, AV586, AV587, AV588, AV589, AV590, AV595, AV596, AV597, AV598, AV599, AV600, AV601, AV602, AV603, AV604, AV605, AV606, AV607, AV608, AV609, AV610, AV6111, AV612, AV616, AV617
 =============================================================
-## Log date 2022-07-05 16:35:30
+## Log date 2022-07-07 14:20:14
 ## File processed: 220601_Datos.csv
 ## Date period: 
 ### First record date: 2022-01-12 22:04:58 
