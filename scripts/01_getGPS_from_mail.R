@@ -29,9 +29,9 @@ con$select_folder(name = "INBOX")
 # Set the filter for date
 # emails are received on the first month's day, so we search after the lasts
 # days of the previous month
-start <- "27-May-2022"
-end <- "29-Jun-2022"
-name_folder <- "2022_05"
+start <- "28-Oct-2022"
+end <- "29-Nov-2022"
+name_folder <- "2022_10"
 
 # Get attachment
 con$search(request = AND(
@@ -74,7 +74,8 @@ texto <- glue::glue(
 - **Period**: the gps data corresponds to {name_folder}
 - Files extracted from mail account: {length(file_names)}
 - IDs of mail extracted: {glue::glue_collapse(str_remove(str_remove(file_names,"body"), ".txt"),sep = ", ")}.
------- '
+
+'
 )
 
 
