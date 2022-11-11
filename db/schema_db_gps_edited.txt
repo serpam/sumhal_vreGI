@@ -1,0 +1,37 @@
+Table dicc_ganaderos {
+	id_ganadero int [pk]
+	user_name varchar
+	localidad varchar
+	phone int
+	mail varchar
+	}
+
+Table dicc_explotaciones {
+	id_ganadero int [pk]
+	name_ganadero varchar
+	id_explotacion int
+	}
+
+Table dicc_dispositivos {
+	id int
+	id_ganadero int
+	type varchar
+	codigo_gps varchar [pk]
+	user_name varchar
+}
+
+Table datos_gps {
+	id int [pk]
+	codigo_gps varchar
+	id_itm int
+	id_user int
+	lat numeric
+	lng numeric
+	time_stamp datetime
+	month int
+} 
+
+	
+Ref: dicc_explotaciones.id_ganadero > dicc_ganaderos.id_ganadero
+Ref: dicc_dispositivos.id_ganadero > dicc_ganaderos.id_ganadero
+Ref: datos_gps.codigo_gps > dicc_dispositivos.codigo_gps
