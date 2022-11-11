@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "",
-    "text": "Uno de los objetivos dentro del proyecto SUMHAL (Sustainability for Mediterranean Hotspots in Andalusia integrating LifeWatch ERIC) consiste en analizar el papel de las prácticas silvopastorales en la conservación. Para ello, en el paquete de trabajo WP7 (Mejora de la sostenibilidad de los bosques mediterráneos y los agrosistemas silvopastorales bajo el cambio climático), existen dos subproyectos: Papel de las prácticas silvopastorales en la conservación (LWE2103026), y Geodatabase, modelo espacial e Integración en entornos virtuales de investigación (LWE2103027), dedicados a realizar este análisis.\nUn aspecto fundamental para analizar el papel de las prácticas silvopastorales en la conservación de la biodiversidad, consiste en el conocimiento de la distribución y la intensidad del pastoreo en las diferentes áreas de interés. Para ello se están utilizando diferentes dispositivos de seguimiento GPS para el ganado, de forma que se pueda conocer el área de pastoreo de una determinada ganadería así como la intensidad de pastoreo. De esta forma nace la necesidad de gestionar grandes volúmnenes de datos derivados del seguimiento GPS del ganado, para lo cual se ha pensado en el dearrollo de una aplicación o Laboratorio Virtual (VRE, Virtual Research Environment) que posibilite el manejo de estos datos"
-  },
-  {
-    "objectID": "index.html#descripción-de-la-aplicación",
-    "href": "index.html#descripción-de-la-aplicación",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Descripción de la aplicación",
-    "text": "Descripción de la aplicación\nLa aplicación consta de diferentes apartados relacionados con las tareas que realiza:\n\nColecta de datos\nIntegración de datos en base de datos\nVisualización\nAnálisis"
+    "text": "Copyright (c) 2022 sumhal_vreGI authors\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
   },
   {
     "objectID": "create_db.html",
     "href": "create_db.html",
-    "title": "create_database",
+    "title": "Creación de la Base de Datos",
     "section": "",
-    "text": "Creamos una base de datos SQLite\n\n\nlibrary(RSQLite)\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.2      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(xlsx)\nlibrary(here)\n\nhere() starts at /Users/ajpelu/SERPAM Dropbox/antonioj perezluque/sumhal/sumhal_vreGI\n\n\nLeer diccionario de datos\n\ndicc_ganaderos <- readxl::read_excel(here::here(\"db/dicc_gps.xlsx\"), sheet = \"dicc_ganaderos\")\ndicc_dispositivos <- readxl::read_excel(here::here(\"db/dicc_gps.xlsx\"), sheet = \"dicc_dispositivos\")\ndicc_explotaciones <- readxl::read_excel(here::here(\"db/dicc_gps.xlsx\"), sheet = \"dicc_explotaciones\")"
+    "text": "Estructura de la base de datos\nLa estructura de la base de datos se puede ver en Figure 1\n\n# Para crear este esquema:\n# 1. Exporto la estructura de la base de datos desde DB Browser Lite (ver /db/schema_db_gps.sql)\n# 2. Edito el archivo y guardo como /db/schema_db_gps_edited.txt \n# 3. Genero png en https://dbdiagram.io/\n\n\n\n\n\n\nFigure 1: Esquema de la base de datos"
   },
   {
     "objectID": "create_db.html#diccionario-ganaderos",
@@ -49,11 +42,39 @@
     "text": "Tabla datos_gps\nCreo la tabla datos_gps. Incluyo el campo codigo_gps como FOREIGN KEY de la tabla dicc_dispositivos\n\nsql_statement <- \"CREATE TABLE datos_gps(\nid INTEGER PRIMARY KEY AUTOINCREMENT,codigo_gps,\n                      id_itm INTEGER, \n                      id_user INTEGER, \n                      lat,\n                      lng, \n                      time_stamp DATETIME,\n                      month INTEGER, FOREIGN KEY(codigo_gps) REFERENCES dicc_dispositivos(codigo_gps))\"\n\n\ndbExecute(conn=con, statement=sql_statement)"
   },
   {
+    "objectID": "index.html#introducción",
+    "href": "index.html#introducción",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Introducción",
+    "text": "Introducción\nUno de los objetivos dentro del proyecto SUMHAL (Sustainability for Mediterranean Hotspots in Andalusia integrating LifeWatch ERIC) consiste en analizar el papel de las prácticas silvopastorales en la conservación. Para ello, en el paquete de trabajo WP7 (Mejora de la sostenibilidad de los bosques mediterráneos y los agrosistemas silvopastorales bajo el cambio climático), existen dos subproyectos: Papel de las prácticas silvopastorales en la conservación (LWE2103026), y Geodatabase, modelo espacial e Integración en entornos virtuales de investigación (LWE2103027), dedicados a realizar este análisis.\nUn aspecto fundamental para analizar el papel de las prácticas silvopastorales en la conservación de la biodiversidad, consiste en el conocimiento de la distribución y la intensidad del pastoreo en las diferentes áreas de interés. Para ello se están utilizando diferentes dispositivos de seguimiento GPS para el ganado, de forma que se pueda conocer el área de pastoreo de una determinada ganadería así como la intensidad de pastoreo. De esta forma nace la necesidad de gestionar grandes volúmnenes de datos derivados del seguimiento GPS del ganado, para lo cual se ha pensado en el dearrollo de una aplicación o Laboratorio Virtual (VRE, Virtual Research Environment) que posibilite el manejo de estos datos"
+  },
+  {
+    "objectID": "index.html#descripción-de-la-aplicación",
+    "href": "index.html#descripción-de-la-aplicación",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Descripción de la aplicación",
+    "text": "Descripción de la aplicación\nLa aplicación consta de diferentes apartados relacionados con las tareas que realiza:\n\nColecta de datos\nIntegración de datos en base de datos\nVisualización\nAnálisis"
+  },
+  {
+    "objectID": "colect_data.html#colecta-de-datos",
+    "href": "colect_data.html#colecta-de-datos",
+    "title": "Colecta de datos",
+    "section": "Colecta de datos",
+    "text": "Colecta de datos\n\nTipología de datos\nUsamos datos de posicionamiento GPS de diferentes dispositivos (categorías):\n\nGPS GSM (gsm): registran la posición en intervalos de 30 minutos, y envían la posición usando la tecnología GSM(Global System for Mobile communications).\nSIGFOX (sigfox): registran la posición en intervalos de 30 minutos, y envían la posición usando la tecnología SIGFOX.\nMedición Continua (mc): registran la posición en intervalos de 5 minutos, y guardan la información en una tarjeta SD. Los datos necesitan ser descargados manualmente\nSatelitales (sat): registran la posición en intervalos de 30 minutos, y envían la posición vía satélite a los servidores de una empresa (Domodis)\n\n\n\n\n\n\n\n\n\n\n\nEn función de la tipología de los dispositivos, se ha implementado un método de colecta de los datos."
+  },
+  {
+    "objectID": "colect_data.html#dispositivos-con-gsm-y-sigfox",
+    "href": "colect_data.html#dispositivos-con-gsm-y-sigfox",
+    "title": "Colecta de datos",
+    "section": "Dispositivos con GSM y SIGFOX",
+    "text": "Dispositivos con GSM y SIGFOX\nEl manejo de información de este tipo de dispositivos es gestionado por la empresa digitanimal, la cual tiene una API que permite la consulta de los datos. Asimismo, tienen desarrollada una aplicación https://digitanimalapp.com/v2/ que permite la visualización de los últimos datos.\nSe ha consultado varias veces a la empresa para poder llevar a cabo una descarga de los datos vía API o similar, pero no nos han proporcionado acceso, por lo que el método de colecta de los datos consiste en el envío por parte de la empresa de varios correos electrónicos a principio de cada mes con los datos del mes anterior. Los correos se envian a la dirección: serpam@eez.csic.es.\nHemos desarrollado un script que colecta los datos del correo 01_getGPS_from_mail.R y posteriormente otro script (02_extractGPS.R) los extrae generando un archivo mensual con todos los datos de los dispositivos GPS. (Ver Figure 1)\n\n\n\n\n\nFigure 1: Flujo de trabajo para la importación de datos de dispositivos GPS sigfox y gsm."
+  },
+  {
     "objectID": "db/control_calidad.html",
     "href": "db/control_calidad.html",
     "title": "Quality control",
     "section": "",
-    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.2      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(kableExtra)\n\n\nAttaching package: 'kableExtra'\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\nlibrary(RSQLite)\nlibrary(here)\n\nhere() starts at /Users/ajpelu/SERPAM Dropbox/antonioj perezluque/sumhal/sumhal_vreGI"
+    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(kableExtra)\n\n\nAttaching package: 'kableExtra'\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\nlibrary(RSQLite)\nlibrary(here)\n\nhere() starts at /Users/ajpelu/SERPAM Dropbox/antonioj perezluque/sumhal/sumhal_vreGI"
   },
   {
     "objectID": "db/control_calidad.html#eliminación-de-datos-previos-al-setup-de-los-gps",
@@ -278,5 +299,12 @@
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-11-09 10:47:01",
     "text": "Log date 2022-11-09 10:47:01\n\nPeriod: the gps data corresponds to 2022_10\nFiles extracted from mail account: 14\nIDs of mail extracted: 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163."
+  },
+  {
+    "objectID": "create_db.html#estructura-de-la-base-de-datos",
+    "href": "create_db.html#estructura-de-la-base-de-datos",
+    "title": "create_database",
+    "section": "Estructura de la base de datos",
+    "text": "Estructura de la base de datos\nLa estructura de la base de datos se puede ver en Figure 1\n\n# Para crear este esquema:\n# 1. Exporto la estructura de la base de datos desde DB Browser Lite (ver /db/schema_db_gps.sql)\n# 2. Edito el archivo y guardo como /db/schema_db_gps_edited.txt \n# 3. Genero png en https://dbdiagram.io/\n\n\n\n\n\n\nFigure 1: Esquema de la base de datos"
   }
 ]

@@ -2,6 +2,9 @@
 title: "Grazing Intensity VRE (Virtual Research Environment)"
 ---
 
+[![](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-brightgreen.svg)](https://github.com/serpam/sumahl_vreGI/commits/master)  [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/)
+
+
 ## Introducción 
 
 Uno de los objetivos dentro del proyecto SUMHAL (*Sustainability for Mediterranean Hotspots in Andalusia integrating LifeWatch ERIC*) consiste en analizar el papel de las prácticas silvopastorales en la conservación. Para ello, en el paquete de trabajo WP7 (*Mejora de la sostenibilidad de los bosques mediterráneos y los agrosistemas silvopastorales bajo el cambio climático*), existen dos subproyectos: *Papel de las prácticas silvopastorales en la conservación* (LWE2103026), y *Geodatabase, modelo espacial e Integración en entornos virtuales de investigación* (LWE2103027), dedicados a realizar este análisis.

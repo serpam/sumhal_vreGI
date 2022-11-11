@@ -8,8 +8,12 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: create_db.qmd
+        text: Create DB
+      - href: colect_data.qmd
+        text: Colecta de datos
       - icon: github
-        href: https://github.com/serpam/rpasveg_alcontar
+        href: https://github.com/serpam/sumhal_vreGI
         aria-label: GitHub repo 
       - icon: twitter
         href: https://twitter.com/SERPAM_EEZ

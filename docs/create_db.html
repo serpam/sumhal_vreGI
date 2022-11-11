@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Grazing Intensity VRE (Virtual Research Environment) - create_database</title>
+<title>Grazing Intensity VRE (Virtual Research Environment) - Creación de la Base de Datos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,8 +145,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li class="nav-item">
     <a class="nav-link" href="./index.html">Home</a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./create_db.html" aria-current="page">Create DB</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./colect_data.html">Colecta de datos</a>
+  </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/serpam/rpasveg_alcontar"><i class="bi bi-github" role="img" aria-label="GitHub repo">
+    <a class="nav-link" href="https://github.com/serpam/sumhal_vreGI"><i class="bi bi-github" role="img" aria-label="GitHub repo">
 </i> 
  </a>
   </li>  
@@ -170,14 +176,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creación-base-de-datos" id="toc-creación-base-de-datos" class="nav-link active" data-scroll-target="#creación-base-de-datos">Creación Base de Datos</a></li>
-  <li><a href="#crear-base-de-datos-y-tablas" id="toc-crear-base-de-datos-y-tablas" class="nav-link" data-scroll-target="#crear-base-de-datos-y-tablas">Crear base de datos y tablas</a>
+  <li><a href="#preparación-de-la-estructura" id="toc-preparación-de-la-estructura" class="nav-link active" data-scroll-target="#preparación-de-la-estructura">Preparación de la estructura</a>
   <ul class="collapse">
   <li><a href="#diccionario-ganaderos" id="toc-diccionario-ganaderos" class="nav-link" data-scroll-target="#diccionario-ganaderos">Diccionario Ganaderos</a></li>
   <li><a href="#diccionario-explotaciones" id="toc-diccionario-explotaciones" class="nav-link" data-scroll-target="#diccionario-explotaciones">Diccionario Explotaciones</a></li>
   <li><a href="#diccionario-dispositivos" id="toc-diccionario-dispositivos" class="nav-link" data-scroll-target="#diccionario-dispositivos">Diccionario Dispositivos</a></li>
   <li><a href="#tabla-datos_gps" id="toc-tabla-datos_gps" class="nav-link" data-scroll-target="#tabla-datos_gps">Tabla datos_gps</a></li>
   </ul></li>
+  <li><a href="#estructura-de-la-base-de-datos" id="toc-estructura-de-la-base-de-datos" class="nav-link" data-scroll-target="#estructura-de-la-base-de-datos">Estructura de la base de datos</a></li>
   </ul>
 </nav>
     </div>
@@ -186,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">create_database</h1>
+<h1 class="title">Creación de la Base de Datos</h1>
 </div>
 
 
@@ -200,106 +206,111 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="creación-base-de-datos" class="level1">
-<h1>Creación Base de Datos</h1>
+<section id="preparación-de-la-estructura" class="level1">
+<h1>Preparación de la estructura</h1>
 <ul>
 <li>Creamos una base de datos SQLite</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.3.6      ✔ purrr   0.3.4 
-✔ tibble  3.1.8      ✔ dplyr   1.0.10
-✔ tidyr   1.2.1      ✔ stringr 1.4.1 
-✔ readr   2.1.2      ✔ forcats 0.5.2 
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xlsx)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>here() starts at /Users/ajpelu/SERPAM Dropbox/antonioj perezluque/sumhal/sumhal_vreGI</code></pre>
-</div>
+
 </div>
 <p>Leer diccionario de datos</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dicc_ganaderos <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/dicc_gps.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"dicc_ganaderos"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dicc_dispositivos <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/dicc_gps.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"dicc_dispositivos"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dicc_explotaciones <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/dicc_gps.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"dicc_explotaciones"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dicc_ganaderos <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/dicc_gps.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"dicc_ganaderos"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dicc_dispositivos <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/dicc_gps.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"dicc_dispositivos"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dicc_explotaciones <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/dicc_gps.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"dicc_explotaciones"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="crear-base-de-datos-y-tablas" class="level1">
-<h1>Crear base de datos y tablas</h1>
+<ul>
+<li>Crear base de datos y tablas</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="at">dbname =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/db_gps.db"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">dbname =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"db/db_gps.db"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="diccionario-ganaderos" class="level2">
-<h2 class="anchored" data-anchor-id="diccionario-ganaderos">Diccionario Ganaderos</h2>
+<section id="diccionario-ganaderos" class="level3">
+<h3 class="anchored" data-anchor-id="diccionario-ganaderos">Diccionario Ganaderos</h3>
 
 <!-- see https://community.rstudio.com/t/create-sqlite-table-with-primary-key-in-r/93634/2 -->
 <p>Creo la tabla <code>dicc_ganaderos</code> y especifico el campo <code>id_ganadero</code> como KEY. Ojo, no utilizo el nombre del ganadero por Ley Protección de Datos.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %s(%s en la siguiente función hace referencia a cada uno de los argumentos posteriores</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"CREATE TABLE %s(%s, PRIMARY KEY(%s))"</span>, <span class="st">"dicc_ganaderos"</span>,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="fu">names</span>(dicc_ganaderos), <span class="at">collapse =</span><span class="st">", "</span>), </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">names</span>(dicc_ganaderos)[<span class="dv">1</span>])</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"dicc_ganaderos"</span>, dicc_ganaderos, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %s(%s en la siguiente función hace referencia a cada uno de los argumentos posteriores</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"CREATE TABLE %s(%s, PRIMARY KEY(%s))"</span>, <span class="st">"dicc_ganaderos"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="fu">names</span>(dicc_ganaderos), <span class="at">collapse =</span><span class="st">", "</span>), </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">names</span>(dicc_ganaderos)[<span class="dv">1</span>])</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"dicc_ganaderos"</span>, dicc_ganaderos, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="diccionario-explotaciones" class="level2">
-<h2 class="anchored" data-anchor-id="diccionario-explotaciones">Diccionario Explotaciones</h2>
+<section id="diccionario-explotaciones" class="level3">
+<h3 class="anchored" data-anchor-id="diccionario-explotaciones">Diccionario Explotaciones</h3>
 <p>Creo la tabla <code>dicc_explotaciones</code> y especifico el campo <code>id_ganadero</code> como FOREING KEY de la tabla <code>dicc_ganaderos</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"CREATE TABLE %s(%s, FOREIGN KEY(%s) REFERENCES %s(%s))"</span>, <span class="st">"dicc_explotaciones"</span>,</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="fu">names</span>(dicc_explotaciones), <span class="at">collapse =</span><span class="st">", "</span>), </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">names</span>(dicc_explotaciones)[<span class="dv">1</span>], <span class="st">"dicc_ganaderos"</span>, </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">names</span>(dicc_ganaderos)[<span class="dv">1</span>])</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"dicc_explotaciones"</span>, dicc_explotaciones, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"CREATE TABLE %s(%s, FOREIGN KEY(%s) REFERENCES %s(%s))"</span>, <span class="st">"dicc_explotaciones"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="fu">names</span>(dicc_explotaciones), <span class="at">collapse =</span><span class="st">", "</span>), </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">names</span>(dicc_explotaciones)[<span class="dv">1</span>], <span class="st">"dicc_ganaderos"</span>, </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">names</span>(dicc_ganaderos)[<span class="dv">1</span>])</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"dicc_explotaciones"</span>, dicc_explotaciones, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="diccionario-dispositivos" class="level2">
-<h2 class="anchored" data-anchor-id="diccionario-dispositivos">Diccionario Dispositivos</h2>
+<section id="diccionario-dispositivos" class="level3">
+<h3 class="anchored" data-anchor-id="diccionario-dispositivos">Diccionario Dispositivos</h3>
 <p>Creo la tabla <code>dicc_dispositivos</code> y especifico el campo <code>codigo_gps</code> como KEY. Incluyo el campo <code>id_ganadero</code> como FOREING KEY de la tabla <code>dicc_ganaderos</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"CREATE TABLE %s(%s, PRIMARY KEY (%s) FOREIGN KEY(%s) REFERENCES %s(%s))"</span>,</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"dicc_dispositivos"</span>,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">paste</span>(<span class="fu">names</span>(dicc_dispositivos), <span class="at">collapse =</span><span class="st">", "</span>), </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">names</span>(dicc_dispositivos)[<span class="dv">4</span>], </span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">names</span>(dicc_dispositivos)[<span class="dv">2</span>],</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"dicc_ganaderos"</span>, </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">names</span>(dicc_ganaderos)[<span class="dv">1</span>])</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"dicc_dispositivos"</span>, dicc_dispositivos, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"CREATE TABLE %s(%s, PRIMARY KEY (%s) FOREIGN KEY(%s) REFERENCES %s(%s))"</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"dicc_dispositivos"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">paste</span>(<span class="fu">names</span>(dicc_dispositivos), <span class="at">collapse =</span><span class="st">", "</span>), </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">names</span>(dicc_dispositivos)[<span class="dv">4</span>], </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">names</span>(dicc_dispositivos)[<span class="dv">2</span>],</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"dicc_ganaderos"</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">names</span>(dicc_ganaderos)[<span class="dv">1</span>])</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"dicc_dispositivos"</span>, dicc_dispositivos, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="tabla-datos_gps" class="level2">
-<h2 class="anchored" data-anchor-id="tabla-datos_gps">Tabla datos_gps</h2>
+<section id="tabla-datos_gps" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-datos_gps">Tabla datos_gps</h3>
 <p>Creo la tabla <code>datos_gps</code>. Incluyo el campo <code>codigo_gps</code> como FOREIGN KEY de la tabla <code>dicc_dispositivos</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="st">"CREATE TABLE datos_gps(</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">id INTEGER PRIMARY KEY AUTOINCREMENT,codigo_gps,</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">                      id_itm INTEGER, </span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">                      id_user INTEGER, </span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="st">                      lat,</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="st">                      lng, </span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="st">                      time_stamp DATETIME,</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="st">                      month INTEGER, FOREIGN KEY(codigo_gps) REFERENCES dicc_dispositivos(codigo_gps))"</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sql_statement <span class="ot">&lt;-</span> <span class="st">"CREATE TABLE datos_gps(</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">id INTEGER PRIMARY KEY AUTOINCREMENT,codigo_gps,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="st">                      id_itm INTEGER, </span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">                      id_user INTEGER, </span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">                      lat,</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">                      lng, </span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="st">                      time_stamp DATETIME,</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="st">                      month INTEGER, FOREIGN KEY(codigo_gps) REFERENCES dicc_dispositivos(codigo_gps))"</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(<span class="at">conn=</span>con, <span class="at">statement=</span>sql_statement)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="estructura-de-la-base-de-datos" class="level1">
+<h1>Estructura de la base de datos</h1>
+<p>La estructura de la base de datos se puede ver en <a href="#fig-db-schema">Figure&nbsp;1</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Para crear este esquema:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Exporto la estructura de la base de datos desde DB Browser Lite (ver /db/schema_db_gps.sql)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Edito el archivo y guardo como /db/schema_db_gps_edited.txt </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Genero png en https://dbdiagram.io/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-db-schema" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/db_schema.png" class="img-fluid figure-img" width="792"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Esquema de la base de datos</figcaption><p></p>
+</figure>
+</div>
+</div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

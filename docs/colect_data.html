@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Grazing Intensity VRE (Virtual Research Environment) - Colecta de datos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="site_libs/datatables-binding-0.26/datatables.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Grazing Intensity VRE (Virtual Research Environment)</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./create_db.html">Create DB</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./colect_data.html" aria-current="page">Colecta de datos</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/serpam/sumhal_vreGI"><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/SERPAM_EEZ"><i class="bi bi-twitter" role="img" aria-label="SERPAM Twitter">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#colecta-de-datos" id="toc-colecta-de-datos" class="nav-link active" data-scroll-target="#colecta-de-datos">Colecta de datos</a>
+  <ul class="collapse">
+  <li><a href="#tipología-de-datos" id="toc-tipología-de-datos" class="nav-link" data-scroll-target="#tipología-de-datos">Tipología de datos</a></li>
+  </ul></li>
+  <li><a href="#dispositivos-con-gsm-y-sigfox" id="toc-dispositivos-con-gsm-y-sigfox" class="nav-link" data-scroll-target="#dispositivos-con-gsm-y-sigfox">Dispositivos con GSM y SIGFOX</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Colecta de datos</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<section id="colecta-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="colecta-de-datos">Colecta de datos</h2>
+<section id="tipología-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="tipología-de-datos">Tipología de datos</h3>
+<p>Usamos datos de posicionamiento GPS de diferentes dispositivos (categorías):</p>
+<ul>
+<li><strong>GPS GSM</strong> (<em>gsm</em>): registran la posición en intervalos de 30 minutos, y envían la posición usando la tecnología <a href="https://es.wikipedia.org/wiki/Sistema_global_para_las_comunicaciones_m%C3%B3viles">GSM</a>(Global System for Mobile communications).</li>
+<li><strong>SIGFOX</strong> (<em>sigfox</em>): registran la posición en intervalos de 30 minutos, y envían la posición usando la tecnología <a href="https://en.wikipedia.org/wiki/Sigfox">SIGFOX</a>.</li>
+<li><strong>Medición Continua</strong> (<em>mc</em>): registran la posición en intervalos de 5 minutos, y guardan la información en una tarjeta SD. Los datos necesitan ser descargados manualmente</li>
+<li><strong>Satelitales</strong> (<em>sat</em>): registran la posición en intervalos de 30 minutos, y envían la posición vía satélite a los servidores de una empresa (<em>Domodis</em>)</li>
+</ul>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="htmlwidget-ac50121c2aa9863996a2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ac50121c2aa9863996a2">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["SNI-1","SNI-1","SNI-1","SNI-1","SNI-2","SNI-2","SNI-2","SNI-2","SNI-2","SNI-3","SNI-3","SNI-3","SNI-4","SNI-4","SNI-4","SNE-1","SNE-1","SNE-1","SNE-2","SNE-2","SNE-2","SNE-2","SNE-3","SNE-3","SNE-3","SNE-4","SNE-4","SNE-4","SNE-5","SNE-5","SNE-5","SNE-6","SNE-6","SNE-6","FIL-2","FIL-2","FIL-2","CG-1","CG-1","CG-1","CG-2","CG-2","CG-2","CG-2","CG-3","CG-3","CG-3","CG-3","SNE-1","SNE-1","SNE-2","SNE-2","SNE-2","SNE-4","SNE-4","SNE-6","SNE-6","CG-1","CG-1","CG-2","CG-2","CG-2","CG-3","CG-3","SNI-1","SNI-1","SNI-1","SNI-2","SNI-2","SNI-2","SNI-3","SNI-3","SNI-4","SNI-4","SNE-3","SNE-3","SNE-5","SNE-5","FIL-2","FIL-2"],["medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","medición continua","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","gsm","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox","sigfox"],["AV571","AV575","AV584","AV585","AV586","AV587","AV588","AV589","AV590","AV591","AV592","AV593","AV594","AV595","AV596","AV597","AV598","AV599","AV600","AV601","AV602","AV603","AV604","AV605","AV606","AV607","AV608","AV609","AV610","AV611","AV612","AV613","AV614","AV615","AV616","AV617","AV618","AV572","AV573","AV574","AV576","AV577","AV578","AV579","AV580","AV581","AV582","AV583","AS046","AT684","AU156","AU597","AV272","AV283","AV285","AV286","AV451","AV278","AV279","AV273","AV274","AV275","AV276","AV277","AV330","AV332","AV333","AV334","AV335","AV336","AV337","AV338","AV339","AV340","AV341","AV342","AV343","AV344","AV345","AU636"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>id_ganadero<\/th>\n      <th>type<\/th>\n      <th>codigo_gps<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>En función de la tipología de los dispositivos, se ha implementado un método de colecta de los datos.</p>
+</section>
+</section>
+<section id="dispositivos-con-gsm-y-sigfox" class="level2">
+<h2 class="anchored" data-anchor-id="dispositivos-con-gsm-y-sigfox">Dispositivos con GSM y SIGFOX</h2>
+<p>El manejo de información de este tipo de dispositivos es gestionado por la empresa <a href="https://digitanimal.com/">digitanimal</a>, la cual tiene una API que permite la consulta de los datos. Asimismo, tienen desarrollada una aplicación https://digitanimalapp.com/v2/ que permite la visualización de los últimos datos.</p>
+<p>Se ha consultado varias veces a la empresa para poder llevar a cabo una descarga de los datos vía API o similar, pero no nos han proporcionado acceso, por lo que el método de colecta de los datos consiste en el envío por parte de la empresa de varios correos electrónicos a principio de cada mes con los datos del mes anterior. Los correos se envian a la dirección: serpam@eez.csic.es.</p>
+<p>Hemos desarrollado un script que colecta los datos del correo <a href="scripts/01_getGPS_from_mail.R"><code>01_getGPS_from_mail.R</code></a> y posteriormente otro script (<a href="scripts/02_extractGPS.R"><code>02_extractGPS.R</code></a>) los extrae generando un archivo mensual con todos los datos de los dispositivos GPS. (Ver <a href="#fig-flow-import-digitanimal">Figure&nbsp;1</a>)</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-flow-import-digitanimal" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/extract_digitanimal.png" class="img-fluid figure-img" width="954"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Flujo de trabajo para la importación de datos de dispositivos GPS sigfox y gsm.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

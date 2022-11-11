@@ -1,0 +1,57 @@
+---
+title: "Colecta de datos"
+---
+
+```{r}
+#| echo: false
+#| warning: false 
+#| message: false
+library(tidyverse)
+library(xlsx)
+library(here)
+library(DT)
+```
+
+## Colecta de datos
+
+### Tipología de datos
+
+Usamos datos de posicionamiento GPS de diferentes dispositivos (categorías):
+
+-   **GPS GSM** (*gsm*): registran la posición en intervalos de 30 minutos, y envían la posición usando la tecnología [GSM](https://es.wikipedia.org/wiki/Sistema_global_para_las_comunicaciones_m%C3%B3viles)(Global System for Mobile communications).
+-   **SIGFOX** (*sigfox*): registran la posición en intervalos de 30 minutos, y envían la posición usando la tecnología [SIGFOX](https://en.wikipedia.org/wiki/Sigfox).
+-   **Medición Continua** (*mc*): registran la posición en intervalos de 5 minutos, y guardan la información en una tarjeta SD. Los datos necesitan ser descargados manualmente
+-   **Satelitales** (*sat*): registran la posición en intervalos de 30 minutos, y envían la posición vía satélite a los servidores de una empresa (*Domodis*)
+
+```{r}
+#| echo: false
+dicc_dispositivos <- readxl::read_excel(here::here("db/dicc_gps.xlsx"), sheet = "dicc_dispositivos")
+```
+
+```{r}
+#| echo: false
+dicc_dispositivos |> 
+  dplyr::select(-id, -user_name) |> 
+  datatable(rownames = FALSE, 
+            filter = 'top')
+```
+
+En función de la tipología de los dispositivos, se ha implementado un método de colecta de los datos.
+
+## Dispositivos con GSM y SIGFOX
+
+El manejo de información de este tipo de dispositivos es gestionado por la empresa [digitanimal](https://digitanimal.com/), la cual tiene una API que permite la consulta de los datos. Asimismo, tienen desarrollada una aplicación https://digitanimalapp.com/v2/ que permite la visualización de los últimos datos.
+
+Se ha consultado varias veces a la empresa para poder llevar a cabo una descarga de los datos vía API o similar, pero no nos han proporcionado acceso, por lo que el método de colecta de los datos consiste en el envío por parte de la empresa de varios correos electrónicos a principio de cada mes con los datos del mes anterior. Los correos se envian a la dirección: serpam\@eez.csic.es.
+
+Hemos desarrollado un script que colecta los datos del correo [`01_getGPS_from_mail.R`](scripts/01_getGPS_from_mail.R) y posteriormente otro script ([`02_extractGPS.R`](scripts/02_extractGPS.R)) los extrae generando un archivo mensual con todos los datos de los dispositivos GPS. (Ver @fig-flow-import-digitanimal)
+
+```{r}
+#| label: fig-flow-import-digitanimal
+#| echo: false
+#| fig-cap: >
+#|    Flujo de trabajo para la importación de datos de dispositivos GPS sigfox y gsm.
+
+knitr::include_graphics("images/extract_digitanimal.png")
+```
+
