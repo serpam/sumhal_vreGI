@@ -5,22 +5,33 @@ project:
 website:
   title: "Grazing Intensity VRE (Virtual Research Environment)"
   navbar:
+    background: primary
+    search: true
     left:
-      - href: index.qmd
-        text: Home
-      - href: create_db.qmd
-        text: Create DB
-      - href: colect_data.qmd
-        text: Colecta de datos
-      - href: logs.qmd
-        text: Logs
+      - text: "Home"
+        file: index.qmd
+      - sidebar:colectadatos
       - icon: github
         href: https://github.com/serpam/sumhal_vreGI
         aria-label: GitHub repo 
       - icon: twitter
         href: https://twitter.com/SERPAM_EEZ
         aria-label: SERPAM Twitter
-
+        
+  sidebar:
+    - id: colectadatos
+      title: "Colecta Datos"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - href: create_db.qmd
+          text: Create DB
+        - href: colect_data.qmd
+          text: Colecta de datos
+        - href: logs.qmd
+          text: Logs
+  
 format:
   html:
     theme: sandstone
