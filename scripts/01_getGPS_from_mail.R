@@ -62,8 +62,8 @@ fs::dir_delete(here::here(here(), "rawdata/gps_mail/eez_serpam/INBOX"))
 
 
 # To create log file the first time
-if (!(file.exists(here::here(here(), "rawdata/gps_mail/eez_serpam/log_getfrommail.md")))) {
-  file.create(here::here(here(), "rawdata/gps_mail/eez_serpam/log_getfrommail.md"))
+if (!(file.exists(here::here(here(), "rawdata/gps_mail/eez_serpam/log-getfrommail.md")))) {
+  file.create(here::here(here(), "rawdata/gps_mail/eez_serpam/log-getfrommail.md"))
 }
 
 # For log
@@ -79,6 +79,6 @@ texto <- glue::glue(
 )
 
 
-write(texto, here::here(here(), "rawdata/gps_mail/eez_serpam/log_getfrommail.md"),
+write(texto, here::here(here(), "rawdata/gps_mail/eez_serpam/log-getfrommail.md"),
   append = TRUE
 )

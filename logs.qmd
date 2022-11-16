@@ -1,0 +1,15 @@
+---
+title: "Logs"
+---
+
+Para cada uno de los procesos de integración de los datos GPS se genera un archivo log indicando algunos detalles (metadatos) de su integración. 
+
+# GPS Satelital 
+
+{{< include /rawdata/gps_sat/log-process-satelital.md >}}
+
+# GPS GSM y SIGFOX: Colecta datos del mail 
+{{< include /rawdata/gps_mail/eez_serpam/log-getfrommail.md >}}
+
+# GPS GSM y SIGFOX: Procesa datos
+{{< include /rawdata/gps_mail/eez_serpam/log-process-gsm.md >}}

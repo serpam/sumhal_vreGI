@@ -58,8 +58,8 @@ write_csv(data, here::here(paste0("rawdata/gps_mail/all_gps_", month_date, ".csv
 
 
 # To create log file the first time
-if (!(file.exists(here::here(here(), "rawdata/gps_mail/eez_serpam/log_process.md")))) {
-  file.create(here::here(here(), "rawdata/gps_mail/eez_serpam/log_process.md"))
+if (!(file.exists(here::here(here(), "rawdata/gps_mail/eez_serpam/log-process-gsm.md")))) {
+  file.create(here::here(here(), "rawdata/gps_mail/eez_serpam/log-process-gsm.md"))
 }
 
 # For log
@@ -88,6 +88,6 @@ texto <- glue::glue(
   '
 )
 
-write(texto, here::here(here(), "rawdata/gps_mail/eez_serpam/log_process.md"),
+write(texto, here::here(here(), "rawdata/gps_mail/eez_serpam/log-process-gsm.md"),
   append = TRUE
 )
