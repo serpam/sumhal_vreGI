@@ -7,39 +7,305 @@
     "text": "Copyright (c) 2022 sumhal_vreGI authors\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
   },
   {
+    "objectID": "logs.html",
+    "href": "logs.html",
+    "title": "Logs",
+    "section": "",
+    "text": "Para cada uno de los procesos de integración de los datos GPS se genera un archivo log indicando algunos detalles (metadatos) de su integración."
+  },
+  {
+    "objectID": "logs.html#files-processed",
+    "href": "logs.html#files-processed",
+    "title": "Logs",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: EmitterData_0-3149097_2021.txt, EmitterData_0-3152132_2021.txt, EmitterData_0-3152480_2021.txt, EmitterData_0-3152481_2021.txt, EmitterData_0-3152790_2021.txt, EmitterData_0-3153202_2021.txt, EmitterData_0-3153207_2021.txt, EmitterData_0-3153208_2021.txt, EmitterData_0-3153210_2021.txt, EmitterData_0-3153211_2021.txt, EmitterData_0-3166367_2021.txt, EmitterData_0-3182806_2021.txt, EmitterData_0-3182886_2021.txt, EmitterData_0-3183295_2021.txt"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed",
+    "href": "logs.html#gps-devices-processed",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 14\n202077 records were processed\nGPS devices: GPS_14, GPS_10, GPS_12, GPS_11, GPS_13, GPS_5, GPS_7, GPS_6, GPS_8, GPS_9, GPS_1, GPS_4, GPS_2, GPS_3"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage",
+    "href": "logs.html#temporal-coverage",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n40749\n2021-06-03 00:10:51\n2022-11-10 23:15:50\n\n\nGPS_2\n43953\n2021-05-29 11:07:40\n2022-11-10 23:07:03\n\n\nGPS_3\n38226\n2021-06-02 19:28:13\n2022-11-10 23:38:26\n\n\nGPS_4\n39528\n2021-06-02 19:06:10\n2022-11-05 19:10:36\n\n\nGPS_5\n6869\n2022-07-21 10:00:11\n2022-11-10 19:36:47\n\n\nGPS_6\n6069\n2022-07-21 10:02:34\n2022-11-10 22:51:25\n\n\nGPS_7\n3894\n2022-07-21 10:00:05\n2022-11-10 23:10:17\n\n\nGPS_8\n6707\n2022-07-21 10:13:06\n2022-11-10 22:33:20\n\n\nGPS_9\n4347\n2022-07-04 13:50:05\n2022-11-10 23:16:30\n\n\nGPS_10\n3620\n2022-07-21 10:20:37\n2022-11-10 23:45:10\n\n\nGPS_11\n1734\n2022-07-21 10:00:42\n2022-11-05 13:51:34\n\n\nGPS_12\n5450\n2022-07-21 10:00:56\n2022-11-10 23:02:12\n\n\nGPS_13\n893\n2022-07-21 10:02:23\n2022-11-10 23:57:55\n\n\nGPS_14\n38\n2022-07-21 10:03:12\n2022-10-25 13:35:40\n\n\n\n\nOutput data:\n\nrawdata/gps_sat/descarga_aplicacion_2022_11_11_.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-1",
+    "href": "logs.html#files-processed-1",
+    "title": "Logs",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 4\nIDs of the files processed: GPS_1.csv, GPS_2.csv, GPS_3.csv, GPS_4.csv"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-1",
+    "href": "logs.html#gps-devices-processed-1",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 4\n197323 records were processed\nGPS devices: GPS_1, GPS_2, GPS_3, GPS_4"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-1",
+    "href": "logs.html#temporal-coverage-1",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n50800\n2019-10-01 11:15:50\n2021-06-04 07:03:19\n\n\nGPS_2\n51498\n2019-10-01 11:09:51\n2021-06-04 06:23:27\n\n\nGPS_3\n45842\n2019-10-01 10:59:25\n2021-06-04 06:57:29\n\n\nGPS_4\n49183\n2019-10-01 11:14:02\n2021-06-04 06:36:23\n\n\n\n\nOutput data:\n\nrawdata/gps_sat/historicos_historico_.csv # Log date 2022-11-16 16:08:19"
+  },
+  {
+    "objectID": "logs.html#files-processed-2",
+    "href": "logs.html#files-processed-2",
+    "title": "Logs",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: EmitterData_0-3149097_2021.txt, EmitterData_0-3152132_2021.txt, EmitterData_0-3152480_2021.txt, EmitterData_0-3152481_2021.txt, EmitterData_0-3152790_2021.txt, EmitterData_0-3153202_2021.txt, EmitterData_0-3153207_2021.txt, EmitterData_0-3153208_2021.txt, EmitterData_0-3153210_2021.txt, EmitterData_0-3153211_2021.txt, EmitterData_0-3166367_2021.txt, EmitterData_0-3182806_2021.txt, EmitterData_0-3182886_2021.txt, EmitterData_0-3183295_2021.txt"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-2",
+    "href": "logs.html#gps-devices-processed-2",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 14\n202077 records were processed\nGPS devices: GPS_14, GPS_10, GPS_12, GPS_11, GPS_13, GPS_5, GPS_7, GPS_6, GPS_8, GPS_9, GPS_1, GPS_4, GPS_2, GPS_3"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-2",
+    "href": "logs.html#temporal-coverage-2",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n40749\n2021-06-03 00:10:51\n2022-11-10 23:15:50\n\n\nGPS_2\n43953\n2021-05-29 11:07:40\n2022-11-10 23:07:03\n\n\nGPS_3\n38226\n2021-06-02 19:28:13\n2022-11-10 23:38:26\n\n\nGPS_4\n39528\n2021-06-02 19:06:10\n2022-11-05 19:10:36\n\n\nGPS_5\n6869\n2022-07-21 10:00:11\n2022-11-10 19:36:47\n\n\nGPS_6\n6069\n2022-07-21 10:02:34\n2022-11-10 22:51:25\n\n\nGPS_7\n3894\n2022-07-21 10:00:05\n2022-11-10 23:10:17\n\n\nGPS_8\n6707\n2022-07-21 10:13:06\n2022-11-10 22:33:20\n\n\nGPS_9\n4347\n2022-07-04 13:50:05\n2022-11-10 23:16:30\n\n\nGPS_10\n3620\n2022-07-21 10:20:37\n2022-11-10 23:45:10\n\n\nGPS_11\n1734\n2022-07-21 10:00:42\n2022-11-05 13:51:34\n\n\nGPS_12\n5450\n2022-07-21 10:00:56\n2022-11-10 23:02:12\n\n\nGPS_13\n893\n2022-07-21 10:02:23\n2022-11-10 23:57:55\n\n\nGPS_14\n38\n2022-07-21 10:03:12\n2022-10-25 13:35:40\n\n\n\n\nOutput data:\n\nrawdata/gps_sat/descarga_aplicacion_2022_11_11_.csv ## Log date 2022-11-16 16:08:21\n\n\n\nFiles processed:\n\nn = 4\nIDs of the files processed: GPS_1.csv, GPS_2.csv, GPS_3.csv, GPS_4.csv\n\n\n\nGPS devices processed:\n\nn = 4\n197323 records were processed\nGPS devices: GPS_1, GPS_2, GPS_3, GPS_4\n\n\n\nTemporal coverage\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n50800\n2019-10-01 11:15:50\n2021-06-04 07:03:19\n\n\nGPS_2\n51498\n2019-10-01 11:09:51\n2021-06-04 06:23:27\n\n\nGPS_3\n45842\n2019-10-01 10:59:25\n2021-06-04 06:57:29\n\n\nGPS_4\n49183\n2019-10-01 11:14:02\n2021-06-04 06:36:23\n\n\n\n\n\nOutput data:\n\nrawdata/gps_sat/historicos_historico_.csv"
+  },
+  {
+    "objectID": "logs.html#log-date-2022-05-03-152321",
+    "href": "logs.html#log-date-2022-05-03-152321",
+    "title": "Logs",
+    "section": "Log date 2022-05-03 15:23:21",
+    "text": "Log date 2022-05-03 15:23:21\n\nPeriod: the gps data corresponds to 2022_03\nFiles extracted from mail account: 14\n\nIDs of mail extracted: 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53."
+  },
+  {
+    "objectID": "logs.html#log-date-2022-05-03-152357",
+    "href": "logs.html#log-date-2022-05-03-152357",
+    "title": "Logs",
+    "section": "Log date 2022-05-03 15:23:57",
+    "text": "Log date 2022-05-03 15:23:57\n\nPeriod: the gps data corresponds to 2022_04\nFiles extractedfrom mail account: 14\n\nIDs of mail extracted: 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68."
+  },
+  {
+    "objectID": "logs.html#log-date-2022-05-03-152542",
+    "href": "logs.html#log-date-2022-05-03-152542",
+    "title": "Logs",
+    "section": "Log date 2022-05-03 15:25:42",
+    "text": "Log date 2022-05-03 15:25:42\n\nPeriod: the gps data corresponds to 2022_02\nFiles extractedfrom mail account: 14\n\nIDs of mail extracted: 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1959, 1960, 1961, 1964, 1966, 1967."
+  },
+  {
+    "objectID": "logs.html#log-date-2022-07-05-113733",
+    "href": "logs.html#log-date-2022-07-05-113733",
+    "title": "Logs",
+    "section": "Log date 2022-07-05 11:37:33",
+    "text": "Log date 2022-07-05 11:37:33\n\nPeriod: the gps data corresponds to 2022_05\nFiles extractedfrom mail account: 14\n\nIDs of mail extracted: 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84."
+  },
+  {
+    "objectID": "logs.html#log-date-2022-11-09-103512",
+    "href": "logs.html#log-date-2022-11-09-103512",
+    "title": "Logs",
+    "section": "Log date 2022-11-09 10:35:12",
+    "text": "Log date 2022-11-09 10:35:12\n\nPeriod: the gps data corresponds to 2022_07\nFiles extracted from mail account: 14\nIDs of mail extracted: 100, 101, 102, 103, 125, 126, 92, 93, 94, 95, 96, 97, 98, 99."
+  },
+  {
+    "objectID": "logs.html#log-date-2022-11-09-103558",
+    "href": "logs.html#log-date-2022-11-09-103558",
+    "title": "Logs",
+    "section": "Log date 2022-11-09 10:35:58",
+    "text": "Log date 2022-11-09 10:35:58\n\nPeriod: the gps data corresponds to 2022_08\nFiles extracted from mail account: 14\nIDs of mail extracted: 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 127."
+  },
+  {
+    "objectID": "logs.html#log-date-2022-11-09-104639",
+    "href": "logs.html#log-date-2022-11-09-104639",
+    "title": "Logs",
+    "section": "Log date 2022-11-09 10:46:39",
+    "text": "Log date 2022-11-09 10:46:39\n\nPeriod: the gps data corresponds to 2022_09\nFiles extracted from mail account: 14\nIDs of mail extracted: 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 143, 144, 145."
+  },
+  {
+    "objectID": "logs.html#log-date-2022-11-09-104701",
+    "href": "logs.html#log-date-2022-11-09-104701",
+    "title": "Logs",
+    "section": "Log date 2022-11-09 10:47:01",
+    "text": "Log date 2022-11-09 10:47:01\n\nPeriod: the gps data corresponds to 2022_10\nFiles extracted from mail account: 14\nIDs of mail extracted: 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163."
+  },
+  {
+    "objectID": "logs.html#files-processed-4",
+    "href": "logs.html#files-processed-4",
+    "title": "Logs",
+    "section": "Files processed",
+    "text": "Files processed\n\nn = 14\nIDs of the files processed: 3508 22022.zip, 1270 22022.zip, 8866 22022.zip, 8868 22022.zip, 8871 22022.zip, 8870 22022.zip, 8872 22022.zip, 8876 22022.zip, 8875 22022.zip, 8869 22022.zip, 8874 22022.zip, 8877 22022.zip, 8873 22022.zip, 8867 22022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-4",
+    "href": "logs.html#temporal-coverage-4",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_02\nFirst record date: 2022-02-01 00:00:26\nLast record date: 2022-03-01 12:25:53"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-4",
+    "href": "logs.html#gps-devices-processed-4",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 38\nUsers devices: 14 users\n25522 records were processed\nGPS devices: AT235, AF382, AN868, AN867, AV342, AV341, AV782, AV781, AV338, AV337, AO771, AV277, AV276, AV278, AV279, AV274, AV273, AV275, AV332, AV333, AV330, AV335, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU156, AV272, AU597, AV343, AV344, AV451, AV286, AU636, AV345\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_02.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-5",
+    "href": "logs.html#files-processed-5",
+    "title": "Logs",
+    "section": "Files processed",
+    "text": "Files processed\n\nn = 14\nIDs of the files processed: 8868 32022.zip, 8870 32022.zip, 8869 32022.zip, 8867 32022.zip, 8877 32022.zip, 8871 32022.zip, 8872 32022.zip, 8874 32022.zip, 8873 32022.zip, 3508 32022.zip, 1270 32022.zip, 8876 32022.zip, 8866 32022.zip, 8875 32022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-5",
+    "href": "logs.html#temporal-coverage-5",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_03\nFirst record date: 2022-03-01 00:02:14\nLast record date: 2022-03-31 23:54:01"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-5",
+    "href": "logs.html#gps-devices-processed-5",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 37\nUsers devices: 14 users\n25266 records were processed\nGPS devices: AV781, AV782, AT235, AF382, AN868, AN867, AV338, AV337, AO771, AV277, AV276, AV279, AV278, AV275, AV273, AV274, AV332, AV333, AV330, AV334, AV335, AV451, AV336, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_03.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-6",
+    "href": "logs.html#files-processed-6",
+    "title": "Logs",
+    "section": "Files processed",
+    "text": "Files processed\n\nn = 14\nIDs of the files processed: 3508 42022.zip, 1270 42022.zip, 8867 42022.zip, 8868 42022.zip, 8866 42022.zip, 8869 42022.zip, 8875 42022.zip, 8876 42022.zip, 8872 42022.zip, 8871 42022.zip, 8873 42022.zip, 8877 42022.zip, 8870 42022.zip, 8874 42022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-6",
+    "href": "logs.html#temporal-coverage-6",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_04\nFirst record date: 2022-04-01 00:01:24\nLast record date: 2022-05-01 00:00:55"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-6",
+    "href": "logs.html#gps-devices-processed-6",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n25820 records were processed\nGPS devices: AN867, AT235, AV781, AV782, AN868, AO771, AV338, AV337, AV277, AV276, AV279, AV278, AV273, AV275, AV274, AV333, AV330, AV332, AV336, AV334, AV335, AV451, AV340, AV339, AT684, AS046, AV283, AV285, AV272, AU156, AU597, AV344, AV343, AV286, AU636, AV345\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_04.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-7",
+    "href": "logs.html#files-processed-7",
+    "title": "Logs",
+    "section": "Files processed",
+    "text": "Files processed\n\nn = 14\nIDs of the files processed: 8868 52022.zip, 8867 52022.zip, 1270 52022.zip, 8870 52022.zip, 8875 52022.zip, 8872 52022.zip, 8871 52022.zip, 8874 52022.zip, 8869 52022.zip, 8877 52022.zip, 8876 52022.zip, 8866 52022.zip, 3508 52022.zip, 8873 52022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-7",
+    "href": "logs.html#temporal-coverage-7",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_05\nFirst record date: 2022-05-01 00:00:55\nLast record date: 2022-06-01 07:11:11"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-7",
+    "href": "logs.html#gps-devices-processed-7",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 37\nUsers devices: 14 users\n26493 records were processed\nGPS devices: AV782, AV781, AT235, AN868, AN867, AV338, AV337, AO772, AO771, AV277, AV276, AV278, AV279, AV275, AV273, AV274, AV332, AV330, AV333, AV336, AV335, AV451, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU597, AV272, AU156, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_05.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-8",
+    "href": "logs.html#files-processed-8",
+    "title": "Logs",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 8875 72022.zip, 8873 72022.zip, 8876 72022.zip, 8872 72022.zip, 8870 72022.zip, 8874 72022.zip, 8867 72022.zip, 8869 72022.zip, 8866 72022.zip, 3508 72022.zip, 1270 72022.zip, 8871 72022.zip, 8868 72022.zip, 8877 72022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-8",
+    "href": "logs.html#temporal-coverage-8",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_07\nFirst record date: 2022-07-01 00:02:38\nLast record date: 2022-08-01 00:00:12"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-8",
+    "href": "logs.html#gps-devices-processed-8",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 34\nUsers devices: 14 users\n16916 records were processed\nGPS devices: AT235, AN868, AV781, AV782, AN867, AV337, AV338, AV277, AV276, AV279, AV278, AV273, AV275, AV274, AV332, AV330, AV333, AV335, AV334, AV451, AV336, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_07.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-9",
+    "href": "logs.html#files-processed-9",
+    "title": "Logs",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 8866 82022.zip, 8868 82022.zip, 1270 82022.zip, 8870 82022.zip, 8867 82022.zip, 8872 82022.zip, 8876 82022.zip, 8869 82022.zip, 8873 82022.zip, 8871 82022.zip, 8874 82022.zip, 8877 82022.zip, 8875 82022.zip, 3508 82022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-9",
+    "href": "logs.html#temporal-coverage-9",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_08\nFirst record date: 2022-08-01 00:00:12\nLast record date: 2022-08-31 23:59:15"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-9",
+    "href": "logs.html#gps-devices-processed-9",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 34\nUsers devices: 14 users\n21030 records were processed\nGPS devices: AT235, AV781, AN868, AV782, AV337, AV338, AV276, AV277, AV278, AV279, AV273, AV275, AV274, AV333, AV332, AV330, AV451, AV335, AV334, AV336, AV339, AV340, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_08.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-10",
+    "href": "logs.html#files-processed-10",
+    "title": "Logs",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 42\nIDs of the files processed: 8866 92022.zip, 8871 92022.zip, 1270 92022.zip, 8869 92022.zip, 3508 92022.zip, 8874 92022.zip, 8867 92022.zip, 8868 92022.zip, 8873 92022.zip, 8876 92022.zip, 8877 92022.zip, 8875 92022.zip, 8870 92022.zip, 8872 92022.zip, 8866 92022.zip, 8871 92022.zip, 1270 92022.zip, 8869 92022.zip, 3508 92022.zip, 8874 92022.zip, 8867 92022.zip, 8868 92022.zip, 8873 92022.zip, 8876 92022.zip, 8877 92022.zip, 8875 92022.zip, 8870 92022.zip, 8872 92022.zip, 1270 102022.zip, 8873 102022.zip, 8870 102022.zip, 3508 102022.zip, 8869 102022.zip, 8872 102022.zip, 8866 102022.zip, 8877 102022.zip, 8875 102022.zip, 8867 102022.zip, 8874 102022.zip, 8871 102022.zip, 8876 102022.zip, 8868 102022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-10",
+    "href": "logs.html#temporal-coverage-10",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_09\nFirst record date: 2022-10-01 00:01:32\nLast record date: 2022-10-31 23:57:52"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-10",
+    "href": "logs.html#gps-devices-processed-10",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n26884 records were processed\nGPS devices: AV782, AT235, AV781, AN867, AN868, AO772, AO771, AV337, AV338, AV276, AV277, AV279, AV278, AV273, AV275, AV330, AV332, AV333, AV336, AV335, AV334, AV451, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_09.csv"
+  },
+  {
+    "objectID": "logs.html#files-processed-11",
+    "href": "logs.html#files-processed-11",
+    "title": "Logs",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 1270 102022.zip, 8873 102022.zip, 8870 102022.zip, 3508 102022.zip, 8869 102022.zip, 8872 102022.zip, 8866 102022.zip, 8877 102022.zip, 8875 102022.zip, 8867 102022.zip, 8874 102022.zip, 8871 102022.zip, 8876 102022.zip, 8868 102022.zip"
+  },
+  {
+    "objectID": "logs.html#temporal-coverage-11",
+    "href": "logs.html#temporal-coverage-11",
+    "title": "Logs",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_10\nFirst record date: 2022-10-01 00:01:32\nLast record date: 2022-10-31 23:57:52"
+  },
+  {
+    "objectID": "logs.html#gps-devices-processed-11",
+    "href": "logs.html#gps-devices-processed-11",
+    "title": "Logs",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n26884 records were processed\nGPS devices: AV782, AT235, AV781, AN867, AN868, AO772, AO771, AV337, AV338, AV276, AV277, AV279, AV278, AV273, AV275, AV330, AV332, AV333, AV336, AV335, AV334, AV451, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_10.csv"
+  },
+  {
     "objectID": "create_db.html",
     "href": "create_db.html",
     "title": "Creación de la Base de Datos",
     "section": "",
     "text": "Estructura de la base de datos\nLa estructura de la base de datos se puede ver en Figure 1\n\n# Para crear este esquema:\n# 1. Exporto la estructura de la base de datos desde DB Browser Lite (ver /db/schema_db_gps.sql)\n# 2. Edito el archivo y guardo como /db/schema_db_gps_edited.txt \n# 3. Genero png en https://dbdiagram.io/\n\n\n\n\n\n\nFigure 1: Esquema de la base de datos"
-  },
-  {
-    "objectID": "create_db.html#diccionario-ganaderos",
-    "href": "create_db.html#diccionario-ganaderos",
-    "title": "create_database",
-    "section": "Diccionario Ganaderos",
-    "text": "Diccionario Ganaderos\n\n\nCreo la tabla dicc_ganaderos y especifico el campo id_ganadero como KEY. Ojo, no utilizo el nombre del ganadero por Ley Protección de Datos.\n\n# %s(%s en la siguiente función hace referencia a cada uno de los argumentos posteriores\n\nsql_statement <- sprintf(\"CREATE TABLE %s(%s, PRIMARY KEY(%s))\", \"dicc_ganaderos\",\n        paste(names(dicc_ganaderos), collapse =\", \"), \n        names(dicc_ganaderos)[1])\n\ndbExecute(conn=con, statement=sql_statement)\ndbWriteTable(con, \"dicc_ganaderos\", dicc_ganaderos, append = TRUE, row.names = FALSE)"
-  },
-  {
-    "objectID": "create_db.html#diccionario-explotaciones",
-    "href": "create_db.html#diccionario-explotaciones",
-    "title": "create_database",
-    "section": "Diccionario Explotaciones",
-    "text": "Diccionario Explotaciones\nCreo la tabla dicc_explotaciones y especifico el campo id_ganadero como FOREING KEY de la tabla dicc_ganaderos.\n\nsql_statement <- sprintf(\"CREATE TABLE %s(%s, FOREIGN KEY(%s) REFERENCES %s(%s))\", \"dicc_explotaciones\",\n        paste(names(dicc_explotaciones), collapse =\", \"), \n        names(dicc_explotaciones)[1], \"dicc_ganaderos\", \n        names(dicc_ganaderos)[1])\n\ndbExecute(conn=con, statement=sql_statement)\ndbWriteTable(con, \"dicc_explotaciones\", dicc_explotaciones, append = TRUE, row.names = FALSE)"
-  },
-  {
-    "objectID": "create_db.html#diccionario-dispositivos",
-    "href": "create_db.html#diccionario-dispositivos",
-    "title": "create_database",
-    "section": "Diccionario Dispositivos",
-    "text": "Diccionario Dispositivos\nCreo la tabla dicc_dispositivos y especifico el campo codigo_gps como KEY. Incluyo el campo id_ganadero como FOREING KEY de la tabla dicc_ganaderos\n\nsql_statement <- sprintf(\"CREATE TABLE %s(%s, PRIMARY KEY (%s) FOREIGN KEY(%s) REFERENCES %s(%s))\",\n                         \"dicc_dispositivos\",\n                         paste(names(dicc_dispositivos), collapse =\", \"), \n                         names(dicc_dispositivos)[4], \n                         names(dicc_dispositivos)[2],\n                         \"dicc_ganaderos\", \n                         names(dicc_ganaderos)[1])\n\ndbExecute(conn=con, statement=sql_statement)\ndbWriteTable(con, \"dicc_dispositivos\", dicc_dispositivos, append = TRUE, row.names = FALSE)"
-  },
-  {
-    "objectID": "create_db.html#tabla-datos_gps",
-    "href": "create_db.html#tabla-datos_gps",
-    "title": "create_database",
-    "section": "Tabla datos_gps",
-    "text": "Tabla datos_gps\nCreo la tabla datos_gps. Incluyo el campo codigo_gps como FOREIGN KEY de la tabla dicc_dispositivos\n\nsql_statement <- \"CREATE TABLE datos_gps(\nid INTEGER PRIMARY KEY AUTOINCREMENT,codigo_gps,\n                      id_itm INTEGER, \n                      id_user INTEGER, \n                      lat,\n                      lng, \n                      time_stamp DATETIME,\n                      month INTEGER, FOREIGN KEY(codigo_gps) REFERENCES dicc_dispositivos(codigo_gps))\"\n\n\ndbExecute(conn=con, statement=sql_statement)"
   },
   {
     "objectID": "index.html#introducción",
@@ -70,6 +336,20 @@
     "text": "Dispositivos con GSM y SIGFOX\nEl manejo de información de este tipo de dispositivos es gestionado por la empresa digitanimal, la cual tiene una API que permite la consulta de los datos. Asimismo, tienen desarrollada una aplicación https://digitanimalapp.com/v2/ que permite la visualización de los últimos datos.\nSe ha consultado varias veces a la empresa para poder llevar a cabo una descarga de los datos vía API o similar, pero no nos han proporcionado acceso, por lo que el método de colecta de los datos consiste en el envío por parte de la empresa de varios correos electrónicos a principio de cada mes con los datos del mes anterior. Los correos se envian a la dirección: serpam@eez.csic.es.\nHemos desarrollado un script que colecta los datos del correo 01_getGPS_from_mail.R y posteriormente otro script (02_extractGPS.R) los extrae generando un archivo mensual con todos los datos de los dispositivos GPS. (Ver Figure 1)\n\n\n\n\n\nFigure 1: Flujo de trabajo para la importación de datos de dispositivos GPS sigfox y gsm."
   },
   {
+    "objectID": "colect_data.html#dispositivos-satelitáles",
+    "href": "colect_data.html#dispositivos-satelitáles",
+    "title": "Colecta de datos",
+    "section": "Dispositivos satelitáles",
+    "text": "Dispositivos satelitáles\nEl manejo de información de este tipo de dispositivos es gestionado por la empresa DOMODIS, la cual tiene una aplicación que permite la consulta de los datos. La descarga de datos es de forma manual (por años y por dispositivo). Se ha contactado con la empresa para conseguir una forma mas eficiente de descarga de los datos. No tienen una API desarrollada. Estamos a la espera de que nos proporcionen una forma mas eficiente de descarga de los datos.\nLos datos descargados manualmente, se procesan mediante 05_prepara_satelital.R ( Figure 2), que formatea los datos y los prepara para su introducción en la base de datos.\n\n\n\n\n\nFigure 2: Flujo de trabajo para la importación de datos de dispositivos GPS satelitales."
+  },
+  {
+    "objectID": "colect_data.html#dispositivos-de-medición-contínua",
+    "href": "colect_data.html#dispositivos-de-medición-contínua",
+    "title": "Colecta de datos",
+    "section": "Dispositivos de medición contínua",
+    "text": "Dispositivos de medición contínua"
+  },
+  {
     "objectID": "db/control_calidad.html",
     "href": "db/control_calidad.html",
     "title": "Quality control",
@@ -84,6 +364,55 @@
     "text": "Eliminación de datos previos al setup de los GPS\n\nSe realiza una visualización espacial de los datos, y existen datos desde que se inicializaron los dispositivos hasta su puesta en campo.\nPara eliminar los datos realizamos una visualización por ganadero, y eliminamos los primeros días de acuerdo a la siguiente tabla (se eliminan los datos hasta la fecha indicada inclusive):\n\n\n\n\n\n\n\n\n \n  \n    ganaderia \n    fecha \n    comment \n  \n \n\n  \n    SNE-1 \n    2022-01-27 \n     \n  \n  \n    SNE-2 \n    2022-01-26 \n    Existen algunos datos erróneos posteriores. Revisar \n  \n  \n    SNE-3 \n    2022-01-27 \n    Existen algunos datos erróneos posteriores. Revisar \n  \n  \n    SNE-4 \n    2022-01-26 \n    Existen algunos datos erróneos posteriores. Revisar \n  \n  \n    SNE-5 \n    2022-01-27 \n     \n  \n  \n    SNE-6 \n     \n    Revisar el estado de esta ganadería \n  \n  \n    CG-1 \n    2022-01-22 \n     \n  \n  \n    CG-2 \n    2022-01-22 \n    Existen algunos datos erróneos posteriores. Revisar \n  \n  \n    CG-3 \n    2022-01-22 \n     \n  \n  \n    FIL-1 \n     \n    Los datos no están incluidos. Son datos Satelitates. Incluir \n  \n  \n    FIL-2 \n    2022-02-10 \n    Existen algunos datos erróneos posteriores. Revisar \n  \n  \n    SNI-1 \n    2022-01-29 \n     \n  \n  \n    SNI-2 \n    2022-02-05 \n    Existen algunos datos erróneos posteriores. Revisar \n  \n  \n    SNI-3 \n     \n    Los datos están OK \n  \n  \n    SNI-4 \n    2022-01-28 \n     \n  \n\n\n\n\n\nPara la eliminación de estos datos (solo se realiza una vez) procedemos a realizar diferentes consultas SQL\n\n# OJO es un DELETE ROWs \nd$query_deleted <- NA\nd$query_nrows <- NA \n\ns <- \"strftime(\\'%s\\',\"\nganaderos <- d$ganaderia\n\nfor (ganadero in ganaderos) { \n  \n  f <- paste0(\"\\'\", d[d$ganaderia == ganadero,]$fecha, \" 00:00:00\\')\")\n  \n  # Esto es para contar cuantas filas voy a eliminar \n  query_nrows <- glue::glue('SELECT datos_gps.*, DATETIME(datos_gps.time_stamp, \\'unixepoch\\') as date, dicc_dispositivos.id_ganadero as id_ganadero FROM datos_gps, dicc_dispositivos WHERE datos_gps.codigo_gps == dicc_dispositivos.codigo_gps AND dicc_dispositivos.id_ganadero LIKE {paste0(\"\\'\",ganadero,\"\\'\")} AND datos_gps.time_stamp < {paste0(s,f)}')\n              \n  query_deleted <- glue::glue('\n             DELETE FROM datos_gps WHERE datos_gps.id IN (SELECT datos_gps.id FROM datos_gps, dicc_dispositivos  WHERE datos_gps.codigo_gps == dicc_dispositivos.codigo_gps AND dicc_dispositivos.id_ganadero LIKE {paste0(\"\\'\",ganadero,\"\\'\")} AND datos_gps.time_stamp < {paste0(s,f)});')\n        \n  d[d$ganaderia == ganadero,]$query_nrows <- query_nrows\n  d[d$ganaderia == ganadero,]$query_deleted <- query_deleted\n}\n\n\ncon <- dbConnect(RSQLite::SQLite(), dbname = here::here(\"db/db_gps.db\"))\n\n### Code to log and track the changes \naux <- d %>% \n  filter(!is.na(fecha)) %>% \n  dplyr::select(query_nrows) %>% pull() %>% \n  purrr::map( ~ dbGetQuery(con, .x))\n\nfile_log <- here::here(here(), \"db/log_qc.txt\") \n\nlog_qc_delete <- function(x, file_log){ \n  \n  # To create log file the first time \n  if(!(file.exists(file_log))){\n    file.create(file_log)\n  }\n  \n  # Log\n  momentum <- Sys.time()\n  texto <- glue::glue('\n  ## Log date {momentum}\n  ## Action: DELETE ROWS \n  ## Details: \n  ## - {nrow(x)} records from {unique(x$id_ganadero)} were deleted\n  ## - Reason: Error in the start-up date of GPS devices \n  ## - Dates removed: From {min(x$date)} to {max(x$date)}\n  ## - The records belong to the following GPS devices:\n  ## {glue::glue_collapse(unique(x$codigo_gps), sep = \", \")}\n  =============================================================')\n  \n  write(texto, file_log, append = TRUE)\n} \n\naux %>% purrr::map( ~log_qc_delete(.x, file_log = file_log))\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\nWarning in min(x$date): no non-missing arguments to min; returning Inf\n\n\nWarning in max(x$date): no non-missing arguments to max; returning -Inf\n\n\n[[1]]\nNULL\n\n[[2]]\nNULL\n\n[[3]]\nNULL\n\n[[4]]\nNULL\n\n[[5]]\nNULL\n\n[[6]]\nNULL\n\n[[7]]\nNULL\n\n[[8]]\nNULL\n\n[[9]]\nNULL\n\n[[10]]\nNULL\n\n[[11]]\nNULL\n\n[[12]]\nNULL\n\n### Code to DELETE the specified rows in the db \n\naux <- d %>% \n  filter(!is.na(fecha)) %>% \n  dplyr::select(query_deleted) %>% pull() %>% \n  purrr::map( ~ dbGetQuery(con, .x))\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery().\n\nWarning in result_fetch(res@ptr, n = n): SQL statements must be issued with\ndbExecute() or dbSendStatement() instead of dbGetQuery() or dbSendQuery()."
   },
   {
+    "objectID": "rawdata/gps_sat/log-process-satelital.html",
+    "href": "rawdata/gps_sat/log-process-satelital.html",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "",
+    "text": "n = 14\nIDs of the files processed: EmitterData_0-3149097_2021.txt, EmitterData_0-3152132_2021.txt, EmitterData_0-3152480_2021.txt, EmitterData_0-3152481_2021.txt, EmitterData_0-3152790_2021.txt, EmitterData_0-3153202_2021.txt, EmitterData_0-3153207_2021.txt, EmitterData_0-3153208_2021.txt, EmitterData_0-3153210_2021.txt, EmitterData_0-3153211_2021.txt, EmitterData_0-3166367_2021.txt, EmitterData_0-3182806_2021.txt, EmitterData_0-3182886_2021.txt, EmitterData_0-3183295_2021.txt\n\n\n\n\n\nn = 14\n202077 records were processed\nGPS devices: GPS_14, GPS_10, GPS_12, GPS_11, GPS_13, GPS_5, GPS_7, GPS_6, GPS_8, GPS_9, GPS_1, GPS_4, GPS_2, GPS_3\n\n\n\n\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n40749\n2021-06-03 00:10:51\n2022-11-10 23:15:50\n\n\nGPS_2\n43953\n2021-05-29 11:07:40\n2022-11-10 23:07:03\n\n\nGPS_3\n38226\n2021-06-02 19:28:13\n2022-11-10 23:38:26\n\n\nGPS_4\n39528\n2021-06-02 19:06:10\n2022-11-05 19:10:36\n\n\nGPS_5\n6869\n2022-07-21 10:00:11\n2022-11-10 19:36:47\n\n\nGPS_6\n6069\n2022-07-21 10:02:34\n2022-11-10 22:51:25\n\n\nGPS_7\n3894\n2022-07-21 10:00:05\n2022-11-10 23:10:17\n\n\nGPS_8\n6707\n2022-07-21 10:13:06\n2022-11-10 22:33:20\n\n\nGPS_9\n4347\n2022-07-04 13:50:05\n2022-11-10 23:16:30\n\n\nGPS_10\n3620\n2022-07-21 10:20:37\n2022-11-10 23:45:10\n\n\nGPS_11\n1734\n2022-07-21 10:00:42\n2022-11-05 13:51:34\n\n\nGPS_12\n5450\n2022-07-21 10:00:56\n2022-11-10 23:02:12\n\n\nGPS_13\n893\n2022-07-21 10:02:23\n2022-11-10 23:57:55\n\n\nGPS_14\n38\n2022-07-21 10:03:12\n2022-10-25 13:35:40\n\n\n\n\n\n\nrawdata/gps_sat/descarga_aplicacion_2022_11_11_.csv"
+  },
+  {
+    "objectID": "rawdata/gps_sat/log-process-satelital.html#files-processed-1",
+    "href": "rawdata/gps_sat/log-process-satelital.html#files-processed-1",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 4\nIDs of the files processed: GPS_1.csv, GPS_2.csv, GPS_3.csv, GPS_4.csv"
+  },
+  {
+    "objectID": "rawdata/gps_sat/log-process-satelital.html#gps-devices-processed-1",
+    "href": "rawdata/gps_sat/log-process-satelital.html#gps-devices-processed-1",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 4\n197323 records were processed\nGPS devices: GPS_1, GPS_2, GPS_3, GPS_4"
+  },
+  {
+    "objectID": "rawdata/gps_sat/log-process-satelital.html#temporal-coverage-1",
+    "href": "rawdata/gps_sat/log-process-satelital.html#temporal-coverage-1",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n50800\n2019-10-01 11:15:50\n2021-06-04 07:03:19\n\n\nGPS_2\n51498\n2019-10-01 11:09:51\n2021-06-04 06:23:27\n\n\nGPS_3\n45842\n2019-10-01 10:59:25\n2021-06-04 06:57:29\n\n\nGPS_4\n49183\n2019-10-01 11:14:02\n2021-06-04 06:36:23\n\n\n\n\nOutput data:\n\nrawdata/gps_sat/historicos_historico_.csv # Log date 2022-11-16 16:08:19"
+  },
+  {
+    "objectID": "rawdata/gps_sat/log-process-satelital.html#files-processed-2",
+    "href": "rawdata/gps_sat/log-process-satelital.html#files-processed-2",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: EmitterData_0-3149097_2021.txt, EmitterData_0-3152132_2021.txt, EmitterData_0-3152480_2021.txt, EmitterData_0-3152481_2021.txt, EmitterData_0-3152790_2021.txt, EmitterData_0-3153202_2021.txt, EmitterData_0-3153207_2021.txt, EmitterData_0-3153208_2021.txt, EmitterData_0-3153210_2021.txt, EmitterData_0-3153211_2021.txt, EmitterData_0-3166367_2021.txt, EmitterData_0-3182806_2021.txt, EmitterData_0-3182886_2021.txt, EmitterData_0-3183295_2021.txt"
+  },
+  {
+    "objectID": "rawdata/gps_sat/log-process-satelital.html#gps-devices-processed-2",
+    "href": "rawdata/gps_sat/log-process-satelital.html#gps-devices-processed-2",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 14\n202077 records were processed\nGPS devices: GPS_14, GPS_10, GPS_12, GPS_11, GPS_13, GPS_5, GPS_7, GPS_6, GPS_8, GPS_9, GPS_1, GPS_4, GPS_2, GPS_3"
+  },
+  {
+    "objectID": "rawdata/gps_sat/log-process-satelital.html#temporal-coverage-2",
+    "href": "rawdata/gps_sat/log-process-satelital.html#temporal-coverage-2",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n40749\n2021-06-03 00:10:51\n2022-11-10 23:15:50\n\n\nGPS_2\n43953\n2021-05-29 11:07:40\n2022-11-10 23:07:03\n\n\nGPS_3\n38226\n2021-06-02 19:28:13\n2022-11-10 23:38:26\n\n\nGPS_4\n39528\n2021-06-02 19:06:10\n2022-11-05 19:10:36\n\n\nGPS_5\n6869\n2022-07-21 10:00:11\n2022-11-10 19:36:47\n\n\nGPS_6\n6069\n2022-07-21 10:02:34\n2022-11-10 22:51:25\n\n\nGPS_7\n3894\n2022-07-21 10:00:05\n2022-11-10 23:10:17\n\n\nGPS_8\n6707\n2022-07-21 10:13:06\n2022-11-10 22:33:20\n\n\nGPS_9\n4347\n2022-07-04 13:50:05\n2022-11-10 23:16:30\n\n\nGPS_10\n3620\n2022-07-21 10:20:37\n2022-11-10 23:45:10\n\n\nGPS_11\n1734\n2022-07-21 10:00:42\n2022-11-05 13:51:34\n\n\nGPS_12\n5450\n2022-07-21 10:00:56\n2022-11-10 23:02:12\n\n\nGPS_13\n893\n2022-07-21 10:02:23\n2022-11-10 23:57:55\n\n\nGPS_14\n38\n2022-07-21 10:03:12\n2022-10-25 13:35:40\n\n\n\n\nOutput data:\n\nrawdata/gps_sat/descarga_aplicacion_2022_11_11_.csv ## Log date 2022-11-16 16:08:21\n\n\n\nFiles processed:\n\nn = 4\nIDs of the files processed: GPS_1.csv, GPS_2.csv, GPS_3.csv, GPS_4.csv\n\n\n\nGPS devices processed:\n\nn = 4\n197323 records were processed\nGPS devices: GPS_1, GPS_2, GPS_3, GPS_4\n\n\n\nTemporal coverage\n\n\n\ncodigo_gps\nnrecords\nfirst_record\nlast_record\n\n\n\n\nGPS_1\n50800\n2019-10-01 11:15:50\n2021-06-04 07:03:19\n\n\nGPS_2\n51498\n2019-10-01 11:09:51\n2021-06-04 06:23:27\n\n\nGPS_3\n45842\n2019-10-01 10:59:25\n2021-06-04 06:57:29\n\n\nGPS_4\n49183\n2019-10-01 11:14:02\n2021-06-04 06:36:23\n\n\n\n\n\nOutput data:\n\nrawdata/gps_sat/historicos_historico_.csv"
+  },
+  {
     "objectID": "rawdata/gps_mail/notas_funcionamiento.html",
     "href": "rawdata/gps_mail/notas_funcionamiento.html",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
@@ -91,220 +420,213 @@
     "text": "Los datos se envian al correo el primer día de cada mes. Extraer y preparar los datos para su inclusión en la base de datos\n\nEjecutar el script 01_getGPS_from_mail.R"
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "",
-    "text": "n = 14\nIDs of the files processed: 3508 22022.zip, 1270 22022.zip, 8866 22022.zip, 8868 22022.zip, 8871 22022.zip, 8870 22022.zip, 8872 22022.zip, 8876 22022.zip, 8875 22022.zip, 8869 22022.zip, 8874 22022.zip, 8877 22022.zip, 8873 22022.zip, 8867 22022.zip\n\n\n\n\n\nDate period: 2022_02\nFirst record date: 2022-02-01 00:00:26\nLast record date: 2022-03-01 12:25:53\n\n\n\n\n\nn = 38\nUsers devices: 14 users\n25522 records were processed\nGPS devices: AT235, AF382, AN868, AN867, AV342, AV341, AV782, AV781, AV338, AV337, AO771, AV277, AV276, AV278, AV279, AV274, AV273, AV275, AV332, AV333, AV330, AV335, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU156, AV272, AU597, AV343, AV344, AV451, AV286, AU636, AV345\n\n\n\n\nrawdata/gps_mail/all_gps_2022_02.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-1",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-1",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Files processed",
-    "text": "Files processed\n\nn = 14\nIDs of the files processed: 8868 32022.zip, 8870 32022.zip, 8869 32022.zip, 8867 32022.zip, 8877 32022.zip, 8871 32022.zip, 8872 32022.zip, 8874 32022.zip, 8873 32022.zip, 3508 32022.zip, 1270 32022.zip, 8876 32022.zip, 8866 32022.zip, 8875 32022.zip"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-1",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-1",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Temporal coverage",
-    "text": "Temporal coverage\n\nDate period: 2022_03\nFirst record date: 2022-03-01 00:02:14\nLast record date: 2022-03-31 23:54:01"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-1",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-1",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "GPS devices processed:",
-    "text": "GPS devices processed:\n\nn = 37\nUsers devices: 14 users\n25266 records were processed\nGPS devices: AV781, AV782, AT235, AF382, AN868, AN867, AV338, AV337, AO771, AV277, AV276, AV279, AV278, AV275, AV273, AV274, AV332, AV333, AV330, AV334, AV335, AV451, AV336, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_03.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-2",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-2",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Files processed",
-    "text": "Files processed\n\nn = 14\nIDs of the files processed: 3508 42022.zip, 1270 42022.zip, 8867 42022.zip, 8868 42022.zip, 8866 42022.zip, 8869 42022.zip, 8875 42022.zip, 8876 42022.zip, 8872 42022.zip, 8871 42022.zip, 8873 42022.zip, 8877 42022.zip, 8870 42022.zip, 8874 42022.zip"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-2",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-2",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Temporal coverage",
-    "text": "Temporal coverage\n\nDate period: 2022_04\nFirst record date: 2022-04-01 00:01:24\nLast record date: 2022-05-01 00:00:55"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-2",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-2",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "GPS devices processed:",
-    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n25820 records were processed\nGPS devices: AN867, AT235, AV781, AV782, AN868, AO771, AV338, AV337, AV277, AV276, AV279, AV278, AV273, AV275, AV274, AV333, AV330, AV332, AV336, AV334, AV335, AV451, AV340, AV339, AT684, AS046, AV283, AV285, AV272, AU156, AU597, AV344, AV343, AV286, AU636, AV345\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_04.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-3",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-3",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Files processed",
-    "text": "Files processed\n\nn = 14\nIDs of the files processed: 8868 52022.zip, 8867 52022.zip, 1270 52022.zip, 8870 52022.zip, 8875 52022.zip, 8872 52022.zip, 8871 52022.zip, 8874 52022.zip, 8869 52022.zip, 8877 52022.zip, 8876 52022.zip, 8866 52022.zip, 3508 52022.zip, 8873 52022.zip"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-3",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-3",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Temporal coverage",
-    "text": "Temporal coverage\n\nDate period: 2022_05\nFirst record date: 2022-05-01 00:00:55\nLast record date: 2022-06-01 07:11:11"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-3",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-3",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "GPS devices processed:",
-    "text": "GPS devices processed:\n\nn = 37\nUsers devices: 14 users\n26493 records were processed\nGPS devices: AV782, AV781, AT235, AN868, AN867, AV338, AV337, AO772, AO771, AV277, AV276, AV278, AV279, AV275, AV273, AV274, AV332, AV330, AV333, AV336, AV335, AV451, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU597, AV272, AU156, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_05.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-4",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-4",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Files processed:",
-    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 8875 72022.zip, 8873 72022.zip, 8876 72022.zip, 8872 72022.zip, 8870 72022.zip, 8874 72022.zip, 8867 72022.zip, 8869 72022.zip, 8866 72022.zip, 3508 72022.zip, 1270 72022.zip, 8871 72022.zip, 8868 72022.zip, 8877 72022.zip"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-4",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-4",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Temporal coverage",
-    "text": "Temporal coverage\n\nDate period: 2022_07\nFirst record date: 2022-07-01 00:02:38\nLast record date: 2022-08-01 00:00:12"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-4",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-4",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "GPS devices processed:",
-    "text": "GPS devices processed:\n\nn = 34\nUsers devices: 14 users\n16916 records were processed\nGPS devices: AT235, AN868, AV781, AV782, AN867, AV337, AV338, AV277, AV276, AV279, AV278, AV273, AV275, AV274, AV332, AV330, AV333, AV335, AV334, AV451, AV336, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_07.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-5",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-5",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Files processed:",
-    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 8866 82022.zip, 8868 82022.zip, 1270 82022.zip, 8870 82022.zip, 8867 82022.zip, 8872 82022.zip, 8876 82022.zip, 8869 82022.zip, 8873 82022.zip, 8871 82022.zip, 8874 82022.zip, 8877 82022.zip, 8875 82022.zip, 3508 82022.zip"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-5",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-5",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Temporal coverage",
-    "text": "Temporal coverage\n\nDate period: 2022_08\nFirst record date: 2022-08-01 00:00:12\nLast record date: 2022-08-31 23:59:15"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-5",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-5",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "GPS devices processed:",
-    "text": "GPS devices processed:\n\nn = 34\nUsers devices: 14 users\n21030 records were processed\nGPS devices: AT235, AV781, AN868, AV782, AV337, AV338, AV276, AV277, AV278, AV279, AV273, AV275, AV274, AV333, AV332, AV330, AV451, AV335, AV334, AV336, AV339, AV340, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_08.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-6",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-6",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Files processed:",
-    "text": "Files processed:\n\nn = 42\nIDs of the files processed: 8866 92022.zip, 8871 92022.zip, 1270 92022.zip, 8869 92022.zip, 3508 92022.zip, 8874 92022.zip, 8867 92022.zip, 8868 92022.zip, 8873 92022.zip, 8876 92022.zip, 8877 92022.zip, 8875 92022.zip, 8870 92022.zip, 8872 92022.zip, 8866 92022.zip, 8871 92022.zip, 1270 92022.zip, 8869 92022.zip, 3508 92022.zip, 8874 92022.zip, 8867 92022.zip, 8868 92022.zip, 8873 92022.zip, 8876 92022.zip, 8877 92022.zip, 8875 92022.zip, 8870 92022.zip, 8872 92022.zip, 1270 102022.zip, 8873 102022.zip, 8870 102022.zip, 3508 102022.zip, 8869 102022.zip, 8872 102022.zip, 8866 102022.zip, 8877 102022.zip, 8875 102022.zip, 8867 102022.zip, 8874 102022.zip, 8871 102022.zip, 8876 102022.zip, 8868 102022.zip"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-6",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-6",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Temporal coverage",
-    "text": "Temporal coverage\n\nDate period: 2022_09\nFirst record date: 2022-10-01 00:01:32\nLast record date: 2022-10-31 23:57:52"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-6",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-6",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "GPS devices processed:",
-    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n26884 records were processed\nGPS devices: AV782, AT235, AV781, AN867, AN868, AO772, AO771, AV337, AV338, AV276, AV277, AV279, AV278, AV273, AV275, AV330, AV332, AV333, AV336, AV335, AV334, AV451, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_09.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-7",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#files-processed-7",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Files processed:",
-    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 1270 102022.zip, 8873 102022.zip, 8870 102022.zip, 3508 102022.zip, 8869 102022.zip, 8872 102022.zip, 8866 102022.zip, 8877 102022.zip, 8875 102022.zip, 8867 102022.zip, 8874 102022.zip, 8871 102022.zip, 8876 102022.zip, 8868 102022.zip"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-7",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#temporal-coverage-7",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "Temporal coverage",
-    "text": "Temporal coverage\n\nDate period: 2022_10\nFirst record date: 2022-10-01 00:01:32\nLast record date: 2022-10-31 23:57:52"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-7",
-    "href": "rawdata/gps_mail/eez_serpam/log_process.html#gps-devices-processed-7",
-    "title": "Grazing Intensity VRE (Virtual Research Environment)",
-    "section": "GPS devices processed:",
-    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n26884 records were processed\nGPS devices: AV782, AT235, AV781, AN867, AN868, AO772, AO771, AV337, AV338, AV276, AV277, AV279, AV278, AV273, AV275, AV330, AV332, AV333, AV336, AV335, AV334, AV451, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_10.csv"
-  },
-  {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "",
     "text": "Period: the gps data corresponds to 2022_03\nFiles extracted from mail account: 14\n\nIDs of mail extracted: 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53."
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-05-03-152357",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-05-03-152357",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-05-03-152357",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-05-03-152357",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-05-03 15:23:57",
     "text": "Log date 2022-05-03 15:23:57\n\nPeriod: the gps data corresponds to 2022_04\nFiles extractedfrom mail account: 14\n\nIDs of mail extracted: 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68."
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-05-03-152542",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-05-03-152542",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-05-03-152542",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-05-03-152542",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-05-03 15:25:42",
     "text": "Log date 2022-05-03 15:25:42\n\nPeriod: the gps data corresponds to 2022_02\nFiles extractedfrom mail account: 14\n\nIDs of mail extracted: 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1959, 1960, 1961, 1964, 1966, 1967."
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-07-05-113733",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-07-05-113733",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-07-05-113733",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-07-05-113733",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-07-05 11:37:33",
     "text": "Log date 2022-07-05 11:37:33\n\nPeriod: the gps data corresponds to 2022_05\nFiles extractedfrom mail account: 14\n\nIDs of mail extracted: 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84."
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-103512",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-103512",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-103512",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-103512",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-11-09 10:35:12",
     "text": "Log date 2022-11-09 10:35:12\n\nPeriod: the gps data corresponds to 2022_07\nFiles extracted from mail account: 14\nIDs of mail extracted: 100, 101, 102, 103, 125, 126, 92, 93, 94, 95, 96, 97, 98, 99."
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-103558",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-103558",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-103558",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-103558",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-11-09 10:35:58",
     "text": "Log date 2022-11-09 10:35:58\n\nPeriod: the gps data corresponds to 2022_08\nFiles extracted from mail account: 14\nIDs of mail extracted: 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 127."
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-104639",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-104639",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-104639",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-104639",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-11-09 10:46:39",
     "text": "Log date 2022-11-09 10:46:39\n\nPeriod: the gps data corresponds to 2022_09\nFiles extracted from mail account: 14\nIDs of mail extracted: 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 143, 144, 145."
   },
   {
-    "objectID": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-104701",
-    "href": "rawdata/gps_mail/eez_serpam/log_getfrommail.html#log-date-2022-11-09-104701",
+    "objectID": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-104701",
+    "href": "rawdata/gps_mail/eez_serpam/log-getfrommail.html#log-date-2022-11-09-104701",
     "title": "Grazing Intensity VRE (Virtual Research Environment)",
     "section": "Log date 2022-11-09 10:47:01",
     "text": "Log date 2022-11-09 10:47:01\n\nPeriod: the gps data corresponds to 2022_10\nFiles extracted from mail account: 14\nIDs of mail extracted: 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163."
   },
   {
-    "objectID": "create_db.html#estructura-de-la-base-de-datos",
-    "href": "create_db.html#estructura-de-la-base-de-datos",
-    "title": "create_database",
-    "section": "Estructura de la base de datos",
-    "text": "Estructura de la base de datos\nLa estructura de la base de datos se puede ver en Figure 1\n\n# Para crear este esquema:\n# 1. Exporto la estructura de la base de datos desde DB Browser Lite (ver /db/schema_db_gps.sql)\n# 2. Edito el archivo y guardo como /db/schema_db_gps_edited.txt \n# 3. Genero png en https://dbdiagram.io/\n\n\n\n\n\n\nFigure 1: Esquema de la base de datos"
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "",
+    "text": "n = 14\nIDs of the files processed: 3508 22022.zip, 1270 22022.zip, 8866 22022.zip, 8868 22022.zip, 8871 22022.zip, 8870 22022.zip, 8872 22022.zip, 8876 22022.zip, 8875 22022.zip, 8869 22022.zip, 8874 22022.zip, 8877 22022.zip, 8873 22022.zip, 8867 22022.zip\n\n\n\n\n\nDate period: 2022_02\nFirst record date: 2022-02-01 00:00:26\nLast record date: 2022-03-01 12:25:53\n\n\n\n\n\nn = 38\nUsers devices: 14 users\n25522 records were processed\nGPS devices: AT235, AF382, AN868, AN867, AV342, AV341, AV782, AV781, AV338, AV337, AO771, AV277, AV276, AV278, AV279, AV274, AV273, AV275, AV332, AV333, AV330, AV335, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU156, AV272, AU597, AV343, AV344, AV451, AV286, AU636, AV345\n\n\n\n\nrawdata/gps_mail/all_gps_2022_02.csv"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-1",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-1",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed",
+    "text": "Files processed\n\nn = 14\nIDs of the files processed: 8868 32022.zip, 8870 32022.zip, 8869 32022.zip, 8867 32022.zip, 8877 32022.zip, 8871 32022.zip, 8872 32022.zip, 8874 32022.zip, 8873 32022.zip, 3508 32022.zip, 1270 32022.zip, 8876 32022.zip, 8866 32022.zip, 8875 32022.zip"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-1",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-1",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_03\nFirst record date: 2022-03-01 00:02:14\nLast record date: 2022-03-31 23:54:01"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-1",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-1",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 37\nUsers devices: 14 users\n25266 records were processed\nGPS devices: AV781, AV782, AT235, AF382, AN868, AN867, AV338, AV337, AO771, AV277, AV276, AV279, AV278, AV275, AV273, AV274, AV332, AV333, AV330, AV334, AV335, AV451, AV336, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_03.csv"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-2",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-2",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed",
+    "text": "Files processed\n\nn = 14\nIDs of the files processed: 3508 42022.zip, 1270 42022.zip, 8867 42022.zip, 8868 42022.zip, 8866 42022.zip, 8869 42022.zip, 8875 42022.zip, 8876 42022.zip, 8872 42022.zip, 8871 42022.zip, 8873 42022.zip, 8877 42022.zip, 8870 42022.zip, 8874 42022.zip"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-2",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-2",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_04\nFirst record date: 2022-04-01 00:01:24\nLast record date: 2022-05-01 00:00:55"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-2",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-2",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n25820 records were processed\nGPS devices: AN867, AT235, AV781, AV782, AN868, AO771, AV338, AV337, AV277, AV276, AV279, AV278, AV273, AV275, AV274, AV333, AV330, AV332, AV336, AV334, AV335, AV451, AV340, AV339, AT684, AS046, AV283, AV285, AV272, AU156, AU597, AV344, AV343, AV286, AU636, AV345\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_04.csv"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-3",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-3",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed",
+    "text": "Files processed\n\nn = 14\nIDs of the files processed: 8868 52022.zip, 8867 52022.zip, 1270 52022.zip, 8870 52022.zip, 8875 52022.zip, 8872 52022.zip, 8871 52022.zip, 8874 52022.zip, 8869 52022.zip, 8877 52022.zip, 8876 52022.zip, 8866 52022.zip, 3508 52022.zip, 8873 52022.zip"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-3",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-3",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_05\nFirst record date: 2022-05-01 00:00:55\nLast record date: 2022-06-01 07:11:11"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-3",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-3",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 37\nUsers devices: 14 users\n26493 records were processed\nGPS devices: AV782, AV781, AT235, AN868, AN867, AV338, AV337, AO772, AO771, AV277, AV276, AV278, AV279, AV275, AV273, AV274, AV332, AV330, AV333, AV336, AV335, AV451, AV334, AV339, AV340, AT684, AS046, AV283, AV285, AU597, AV272, AU156, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data\n\nrawdata/gps_mail/all_gps_2022_05.csv"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-4",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-4",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 8875 72022.zip, 8873 72022.zip, 8876 72022.zip, 8872 72022.zip, 8870 72022.zip, 8874 72022.zip, 8867 72022.zip, 8869 72022.zip, 8866 72022.zip, 3508 72022.zip, 1270 72022.zip, 8871 72022.zip, 8868 72022.zip, 8877 72022.zip"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-4",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-4",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_07\nFirst record date: 2022-07-01 00:02:38\nLast record date: 2022-08-01 00:00:12"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-4",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-4",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 34\nUsers devices: 14 users\n16916 records were processed\nGPS devices: AT235, AN868, AV781, AV782, AN867, AV337, AV338, AV277, AV276, AV279, AV278, AV273, AV275, AV274, AV332, AV330, AV333, AV335, AV334, AV451, AV336, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_07.csv"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-5",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-5",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 8866 82022.zip, 8868 82022.zip, 1270 82022.zip, 8870 82022.zip, 8867 82022.zip, 8872 82022.zip, 8876 82022.zip, 8869 82022.zip, 8873 82022.zip, 8871 82022.zip, 8874 82022.zip, 8877 82022.zip, 8875 82022.zip, 3508 82022.zip"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-5",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-5",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_08\nFirst record date: 2022-08-01 00:00:12\nLast record date: 2022-08-31 23:59:15"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-5",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-5",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 34\nUsers devices: 14 users\n21030 records were processed\nGPS devices: AT235, AV781, AN868, AV782, AV337, AV338, AV276, AV277, AV278, AV279, AV273, AV275, AV274, AV333, AV332, AV330, AV451, AV335, AV334, AV336, AV339, AV340, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV344, AV343, AV286, AV345, AU636\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_08.csv"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-6",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-6",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 42\nIDs of the files processed: 8866 92022.zip, 8871 92022.zip, 1270 92022.zip, 8869 92022.zip, 3508 92022.zip, 8874 92022.zip, 8867 92022.zip, 8868 92022.zip, 8873 92022.zip, 8876 92022.zip, 8877 92022.zip, 8875 92022.zip, 8870 92022.zip, 8872 92022.zip, 8866 92022.zip, 8871 92022.zip, 1270 92022.zip, 8869 92022.zip, 3508 92022.zip, 8874 92022.zip, 8867 92022.zip, 8868 92022.zip, 8873 92022.zip, 8876 92022.zip, 8877 92022.zip, 8875 92022.zip, 8870 92022.zip, 8872 92022.zip, 1270 102022.zip, 8873 102022.zip, 8870 102022.zip, 3508 102022.zip, 8869 102022.zip, 8872 102022.zip, 8866 102022.zip, 8877 102022.zip, 8875 102022.zip, 8867 102022.zip, 8874 102022.zip, 8871 102022.zip, 8876 102022.zip, 8868 102022.zip"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-6",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-6",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_09\nFirst record date: 2022-10-01 00:01:32\nLast record date: 2022-10-31 23:57:52"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-6",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-6",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n26884 records were processed\nGPS devices: AV782, AT235, AV781, AN867, AN868, AO772, AO771, AV337, AV338, AV276, AV277, AV279, AV278, AV273, AV275, AV330, AV332, AV333, AV336, AV335, AV334, AV451, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_09.csv"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-7",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#files-processed-7",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Files processed:",
+    "text": "Files processed:\n\nn = 14\nIDs of the files processed: 1270 102022.zip, 8873 102022.zip, 8870 102022.zip, 3508 102022.zip, 8869 102022.zip, 8872 102022.zip, 8866 102022.zip, 8877 102022.zip, 8875 102022.zip, 8867 102022.zip, 8874 102022.zip, 8871 102022.zip, 8876 102022.zip, 8868 102022.zip"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-7",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#temporal-coverage-7",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "Temporal coverage",
+    "text": "Temporal coverage\n\nDate period: 2022_10\nFirst record date: 2022-10-01 00:01:32\nLast record date: 2022-10-31 23:57:52"
+  },
+  {
+    "objectID": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-7",
+    "href": "rawdata/gps_mail/eez_serpam/log-process-gsm.html#gps-devices-processed-7",
+    "title": "Grazing Intensity VRE (Virtual Research Environment)",
+    "section": "GPS devices processed:",
+    "text": "GPS devices processed:\n\nn = 36\nUsers devices: 14 users\n26884 records were processed\nGPS devices: AV782, AT235, AV781, AN867, AN868, AO772, AO771, AV337, AV338, AV276, AV277, AV279, AV278, AV273, AV275, AV330, AV332, AV333, AV336, AV335, AV334, AV451, AV340, AV339, AT684, AS046, AV285, AV283, AU156, AU597, AV272, AV343, AV344, AV286, AU636, AV345\n\n\nOutput data:\n\nrawdata/gps_mail/all_gps_2022_10.csv"
   }
 ]

@@ -12,6 +12,8 @@ website:
         text: Create DB
       - href: colect_data.qmd
         text: Colecta de datos
+      - href: logs.qmd
+        text: Logs
       - icon: github
         href: https://github.com/serpam/sumhal_vreGI
         aria-label: GitHub repo 

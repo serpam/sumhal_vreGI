@@ -55,3 +55,22 @@ Hemos desarrollado un script que colecta los datos del correo [`01_getGPS_from_m
 knitr::include_graphics("images/extract_digitanimal.png")
 ```
 
+## Dispositivos satelitáles 
+
+El manejo de información de este tipo de dispositivos es gestionado por la empresa [DOMODIS](http://www.domodis.com/), la cual tiene una aplicación que permite la consulta de los datos. La descarga de datos es de forma manual (por años y por dispositivo). Se ha contactado con la empresa para conseguir una forma mas eficiente de descarga de los datos. No tienen una API desarrollada. Estamos a la espera de que nos proporcionen una forma mas eficiente de descarga de los datos. 
+
+Los datos descargados manualmente, se procesan mediante [`05_prepara_satelital.R`](scripts/05_prepara_satelital.R) ( @fig-flow-import-domodis), que formatea los datos y los prepara para su introducción en la base de datos. 
+
+```{r}
+#| label: fig-flow-import-domodis
+#| echo: false
+#| fig-cap: >
+#|    Flujo de trabajo para la importación de datos de dispositivos GPS satelitales.
+
+knitr::include_graphics("images/extract_domodis.png")
+```
+
+
+## Dispositivos de medición contínua 
+
+

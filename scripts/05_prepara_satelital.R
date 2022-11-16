@@ -69,8 +69,8 @@ write_csv(g,
 
 
 # To create log file the first time
-if (!(file.exists(here::here(here(), "rawdata/gps_sat/log_process_satelital.md")))) {
-  file.create(here::here(here(), "rawdata/gps_sat/log_process_satelital.md"))
+if (!(file.exists(here::here(here(), "rawdata/gps_sat/log-process-satelital.md")))) {
+  file.create(here::here(here(), "rawdata/gps_sat/log-process-satelital.md"))
 }
 
 # For log
@@ -96,7 +96,7 @@ texto <- glue::glue(
 )
 
 
-write(texto, here::here(here(), "rawdata/gps_sat/log_process_satelital.md"),
+write(texto, here::here(here(), "rawdata/gps_sat/log-process-satelital.md"),
       append = TRUE
 )
 
@@ -170,25 +170,25 @@ write_csv(h,
 
 
 # To create log file the first time
-if (!(file.exists(here::here(here(), "rawdata/gps_sat/log_process_satelital.md")))) {
-  file.create(here::here(here(), "rawdata/gps_sat/log_process_satelital.md"))
+if (!(file.exists(here::here(here(), "rawdata/gps_sat/log-process-satelital.md")))) {
+  file.create(here::here(here(), "rawdata/gps_sat/log-process-satelital.md"))
 }
 
 # For log
 momentum <- Sys.time()
 texto <- glue::glue(
-  '# Log date {momentum}
+  '## Log date {momentum}
   
-  ## Files processed:
+  ### Files processed:
   - n = {length(file_names)}
   - **IDs** of the files processed: {glue::glue_collapse(basename(file_names), sep = ", ")}
   
-  ## GPS devices processed: 
+  ### GPS devices processed: 
   - n = {length(unique(h$codigo_gps))}
   - {nrow(h)} records were processed
   - GPS devices: {glue::glue_collapse(unique(h$codigo_gps), sep = ", ")}
   
-  ## Temporal coverage
+  ### Temporal coverage
   {md_table(sth)}
 
   ### Output data: 
@@ -197,15 +197,13 @@ texto <- glue::glue(
 )
 
 
-write(texto, here::here(here(), "rawdata/gps_sat/log_process_satelital.md"),
+write(texto, here::here(here(), "rawdata/gps_sat/log-process-satelital.md"),
       append = TRUE
 )
 
 
 
   
-
-
 
 
 
