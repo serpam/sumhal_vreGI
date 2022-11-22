@@ -340,21 +340,21 @@
     "href": "colect_data.html#dispositivos-satelitáles",
     "title": "Colecta de datos",
     "section": "Dispositivos satelitáles",
-    "text": "Dispositivos satelitáles\nEl manejo de información de este tipo de dispositivos es gestionado por la empresa DOMODIS, la cual tiene una aplicación que permite la consulta de los datos. La descarga de datos es de forma manual (por años y por dispositivo). Se ha contactado con la empresa para conseguir una forma mas eficiente de descarga de los datos. No tienen una API desarrollada. Estamos a la espera de que nos proporcionen una forma mas eficiente de descarga de los datos.\nLos datos descargados manualmente, se procesan mediante 05_prepara_satelital.R ( Figure 2), que formatea los datos y los prepara para su introducción en la base de datos.\n\n\n\n\n\nFigure 2: Flujo de trabajo para la importación de datos de dispositivos GPS satelitales."
+    "text": "Dispositivos satelitáles\nEl manejo de información de este tipo de dispositivos es gestionado por la empresa DOMODIS, la cual tiene una aplicación que permite la consulta de los datos. La descarga de datos es de forma manual (por años y por dispositivo). Se ha contactado con la empresa para conseguir una forma mas eficiente de descarga de los datos. No tienen una API desarrollada. Estamos a la espera de que nos proporcionen una forma mas eficiente de descarga de los datos.\nLos datos descargados manualmente, se procesan mediante 03_prepara_satelital.R ( Figure 2), que formatea los datos y los prepara para su introducción en la base de datos.\n\n\n\n\n\nFigure 2: Flujo de trabajo para la importación de datos de dispositivos GPS satelitales."
   },
   {
     "objectID": "colect_data.html#dispositivos-de-medición-contínua",
     "href": "colect_data.html#dispositivos-de-medición-contínua",
     "title": "Colecta de datos",
     "section": "Dispositivos de medición contínua",
-    "text": "Dispositivos de medición contínua"
+    "text": "Dispositivos de medición contínua\nSe trata de unos dispositivos proporcionados por la empresa digitanimal similares a los dispositivos GSM, que en vez de enviar los datos, los almacenan de forma interna en una tarjeta microSD. Están programados para registrar la posición cada 5 minutos, y han de ser descargados manualmente cada dos meses.\nHemos desarrollado un script que colecta los datos del correo 01_getGPS_from_mail.R y posteriormente otro script (02_extractGPS.R) los extrae generando un archivo mensual con todos los datos de los dispositivos GPS. (Ver Figure 1)"
   },
   {
     "objectID": "db/control_calidad.html",
     "href": "db/control_calidad.html",
     "title": "Quality control",
     "section": "",
-    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(kableExtra)\n\n\nAttaching package: 'kableExtra'\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\nlibrary(RSQLite)\nlibrary(here)\n\nhere() starts at /Users/ajpelu/SERPAM Dropbox/antonioj perezluque/sumhal/sumhal_vreGI"
+    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   0.3.5 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(kableExtra)\n\n\nAttaching package: 'kableExtra'\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\nlibrary(RSQLite)\nlibrary(here)\n\nhere() starts at /Users/ajpelu/SERPAM Dropbox/antonioj perezluque/sumhal/sumhal_vreGI"
   },
   {
     "objectID": "db/control_calidad.html#eliminación-de-datos-previos-al-setup-de-los-gps",

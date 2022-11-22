@@ -31,6 +31,15 @@ website:
           text: Colecta de datos
         - href: logs.qmd
           text: Logs
+    - id: apps
+      title: "Apps"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - href: https://github.com/serpam/convertGPS_cattle
+          text: Converter apps
+  
   
 format:
   html:

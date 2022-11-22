@@ -59,7 +59,7 @@ knitr::include_graphics("images/extract_digitanimal.png")
 
 El manejo de información de este tipo de dispositivos es gestionado por la empresa [DOMODIS](http://www.domodis.com/), la cual tiene una aplicación que permite la consulta de los datos. La descarga de datos es de forma manual (por años y por dispositivo). Se ha contactado con la empresa para conseguir una forma mas eficiente de descarga de los datos. No tienen una API desarrollada. Estamos a la espera de que nos proporcionen una forma mas eficiente de descarga de los datos. 
 
-Los datos descargados manualmente, se procesan mediante [`05_prepara_satelital.R`](scripts/05_prepara_satelital.R) ( @fig-flow-import-domodis), que formatea los datos y los prepara para su introducción en la base de datos. 
+Los datos descargados manualmente, se procesan mediante [`03_prepara_satelital.R`](scripts/03_prepara_satelital.R) ( @fig-flow-import-domodis), que formatea los datos y los prepara para su introducción en la base de datos. 
 
 ```{r}
 #| label: fig-flow-import-domodis
@@ -70,7 +70,8 @@ Los datos descargados manualmente, se procesan mediante [`05_prepara_satelital.R
 knitr::include_graphics("images/extract_domodis.png")
 ```
 
-
 ## Dispositivos de medición contínua 
 
+Se trata de unos dispositivos proporcionados por la empresa [digitanimal](https://digitanimal.com/) similares a los dispositivos GSM, que en vez de enviar los datos, los almacenan de forma interna en una tarjeta microSD. Están programados para registrar la posición cada 5 minutos, y han de ser descargados manualmente cada dos meses. 
 
+Hemos desarrollado un script que colecta los datos del correo [`01_getGPS_from_mail.R`](scripts/01_getGPS_from_mail.R) y posteriormente otro script ([`02_extractGPS.R`](scripts/02_extractGPS.R)) los extrae generando un archivo mensual con todos los datos de los dispositivos GPS. (Ver @fig-flow-import-digitanimal)
