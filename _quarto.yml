@@ -11,6 +11,7 @@ website:
       - text: "Home"
         file: index.qmd
       - sidebar:colectadatos
+      - sidebar:apps
       - icon: github
         href: https://github.com/serpam/sumhal_vreGI
         aria-label: GitHub repo 
