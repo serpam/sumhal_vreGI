@@ -5,6 +5,7 @@ library(sf)
 library(tidyverse)
 library(raster)
 library(RSQLite)
+library(RColorBrewer)
 
 ### Aquí ira un código que limpiará todos los datos y los guardará como Rds o algo similiar en la app. 
 ### Ahora trabajaremos con gps 
@@ -32,6 +33,11 @@ gps <- gps |>
 gps_points <- st_as_sf(gps, coords = c("lng", "lat"), crs = 4326)
 
 
+
+
+
+
+### Shiny App
 ui <- bootstrapPage(
   tags$style(type = "text/css", "html, body {width:100%;height:100%}"),
   leafglOutput("mymap", width = "100%", height = "100%"),
@@ -54,7 +60,6 @@ ui <- bootstrapPage(
 
 server <- function(input, output, session) {
   
-  
   # filtrar por ganadero 
   ganadero_data <- reactive({ 
     if (input$ganadero == "Todos") { 
@@ -64,12 +69,35 @@ server <- function(input, output, session) {
       }
     })
   
+  paleta <- reactive({
+    if (input$ganadero == "Todos") {
+      pal <- colorFactor(palette = "viridis", gps_points$codigo_gps)
+    } else {
+      custom_palette <- c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33')
+      pal <- colorFactor(palette = custom_palette, ganadero_data()$codigo_gps)
+    }
+
+  })
+
+  
+  # colorstyle <- reactive({
+  #   if (input$ganadero == "Todos") { 
+  #     "blue" 
+  #   } else { 
+  #     custom_palette <- c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33')
+  #     pal <- colorFactor(palette = custom_palette, ganadero_data()$codigo_gps )
+  #       }
+  # })
+  
+  
+  
   # Reactive expression for the data subsetted to what the user selected
   filteredData  <- reactive({
     ganadero_data()  |>
       dplyr::filter(date_time >= input$dateRange[1] & date_time <= input$dateRange[2])
   })
   
+
   observeEvent(input$ganadero, {
     updateDateRangeInput(session,
                          inputId = "dateRange",
@@ -112,77 +140,27 @@ server <- function(input, output, session) {
   
 
   observe({
+    popup_point <- paste0("<strong>Ganadero:</strong> ", filteredData()$user_name,
+                          "<br><strong>GPS:</strong> ", filteredData()$codigo_gps,
+                          "<br><strong>Tipo:</strong> ", filteredData()$type,
+                          "<br><strong>Fecha:</strong> ", filteredData()$date_time)
+    pal <- paleta()
+    
     leafletProxy('mymap') %>%
       setView(
         lng = as.numeric(centro()[1]),
         lat = as.numeric(centro()[2]),
         zoom = 12
       ) %>% 
-      addGlPoints(data = filteredData(), group = "pts") 
+      addGlPoints(data = filteredData(), 
+                  group = "pts", 
+                  popup = popup_point, 
+                  fillColor = ~pal(codigo_gps)) 
   })
-  # Reactive que devuelve los puntos de los gps seleccionados
 
-
-  
-  
-  
-  # This reactive expression represents the palette function,
-  # which changes as the user makes selections in UI.
-  # colorpal <- reactive({
-  #   colorNumeric(input$colors, quakes$mag)
-  # })
-  
-  # output$map <- renderLeaflet({
-  #   # Use leaflet() here, and only include aspects of the map that
-  #   # won't need to change dynamically (at least, not unless the
-  #   # entire map is being torn down and recreated).
-  #   # leaflet() %>% addTiles() %>%
-  #   #   fitBounds(~min(long), ~min(lat), ~max(long), ~max(lat))
-  #   # 
-  #   
-  #     addGlPoints(data = filteredData()) 
-  #   
-  # })
-  # 
-  
-  # observe({
-  #   # Un observer para establcer el mapbox de los datos 
-  #   coordinates(filteredData()) <- ~long+lat
-  #   proj4string(filteredData()) <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
-  #   mapcenter <- coordinates(as(extent(filteredData()), "SpatialPolygons"))
-  #   
-  # })
-  
-  # Incremental changes to the map (in this case, replacing the
-  # circles when a new color is chosen) should be performed in
-  # an observer. Each independent set of things that can change
-  # should be managed in its own observer.
-  # observe({
-  #   # pal <- colorpal()
-  #   
-  #   leafletProxy("map", data = gps) %>%
-  #     addGlPoints(data = filteredData(), 
-  #               popup = ~paste0("ID GPS: ", filteredData()$id_gps)) %>%
-  #     setView(lng = mapcenter()[1] , lat = mapcenter()[2], zoom = 12)
-  #   
-  # })
-  
-  
-  # Use a separate observer to recreate the legend as needed.
-  # observe({
-  #   proxy <- leafletProxy("map", data = quakes)
-  #   
-  #   # Remove any existing legend, and only if the legend is
-  #   # enabled, create a new one.
-  #   proxy %>% clearControls()
-  #   if (input$legend) {
-  #     pal <- colorpal()
-  #     proxy %>% addLegend(position = "bottomright",
-  #                         pal = pal, values = ~mag
-  #     )
-  #   }
-  # })
 }
+  
+  
 
 shinyApp(ui, server)
 
