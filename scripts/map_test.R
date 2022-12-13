@@ -6,24 +6,29 @@ library(tidyverse)
 library(raster)
 library(RSQLite)
 
+### Aquí ira un código que limpiará todos los datos y los guardará como Rds o algo similiar en la app. 
+### Ahora trabajaremos con gps 
 
 con <- dbConnect(RSQLite::SQLite(), dbname = here::here("db/db_gps.db"))
 
 # Get dicc Dispositivos 
-dicc_gps <-dbGetQuery(con, "SELECT * FROM dicc_dispositivos")
+dicc_gps <- dbGetQuery(con, "SELECT * FROM dicc_dispositivos")
 
-gps <- dbGetQuery(con, "SELECT * FROM datos_gps") %>% 
+gps <- dbGetQuery(con, "SELECT * FROM datos_gps") |>  
   dplyr::mutate(date_time = lubridate::as_datetime(time_stamp))
-gps <- inner_join(gps, dicc_gps)
+
+gps <- inner_join(gps, dicc_gps, by="codigo_gps")
 
 
 # Filter by zone 
-gps <- gps %>%
-  filter(lat != 0) %>%
-  filter(lat < 40 & lat > 36) %>% 
-  filter(lng != 0) %>% 
+gps <- gps |> 
+  filter(lat != 0) |> 
+  filter(lat < 40 & lat > 36) |>  
+  filter(lng != 0) |> 
   filter(lng > -7 & lng < 0)
-  
+
+### Hasta aquí llegara el limpiado de datos. Se cargarán los datos y se transformarán en spatial data 
+
 gps_points <- st_as_sf(gps, coords = c("lng", "lat"), crs = 4326)
 
 
@@ -32,30 +37,55 @@ ui <- bootstrapPage(
   leafglOutput("mymap", width = "100%", height = "100%"),
   absolutePanel(top = 10, right = 10,
                 
-                selectInput("ganadero", "Ganadero", unique(gps_points$user_name)),
+                selectInput(inputId = "ganadero", 
+                            label = "Ganadero", 
+                            choices = c("Todos", unique(gps_points$user_name))),
                 # selectInput("gps", "GPS device", unique(gps_points$id_gps), multiple = TRUE),
                 dateRangeInput("dateRange",
                                "Filtrar por fecha",
+                               min = as.Date('2021-12-31'),
                                start = as.Date('2021-12-31'), 
-                               end = as.Date(Sys.Date())
+                               end = as.Date(Sys.Date()),
+                               max = as.Date(Sys.Date())
                 )
   )
 )
 
 
-
-
 server <- function(input, output, session) {
   
   
+  # filtrar por ganadero 
+  ganadero_data <- reactive({ 
+    if (input$ganadero == "Todos") { 
+      gps_points
+    } else {
+      gps_points |> dplyr::filter(user_name == input$ganadero)
+      }
+    })
+  
   # Reactive expression for the data subsetted to what the user selected
   filteredData  <- reactive({
-   gps_points %>% 
-      dplyr::filter(user_name == input$ganadero) %>% 
-      # filter(id_gps == input$gps) %>% 
+    ganadero_data()  |>
       dplyr::filter(date_time >= input$dateRange[1] & date_time <= input$dateRange[2])
   })
   
+  observeEvent(input$ganadero, {
+    updateDateRangeInput(session,
+                         inputId = "dateRange",
+                         min = as.Date('2021-12-31'),
+                         max = as.Date(Sys.Date()),
+                         start = min(ganadero_data()$date_time),
+                         end = max(ganadero_data()$date_time))
+    updateDateRangeInput(session,
+                         inputId = "dateRange",
+                         min = min(ganadero_data()$date_time),
+                         max = max(ganadero_data()$date_time))
+  }
+  )
+  
+  
+  # Center the map to the selected features 
   centro <- reactive({
     coordinates(as(extent(filteredData()), "SpatialPolygons"))
   })
@@ -63,7 +93,7 @@ server <- function(input, output, session) {
   
   # Crear el mapa 
   output$mymap <- renderLeaflet({
-    leaflet() %>%
+    leaflet(data = filteredData()) %>%
       # addProviderTiles(providers$OpenStreetMap) %>% 
       addWMSTiles('http://www.ideandalucia.es/wms/mdt_2005?',
                   layers = 'Sombreado_10',
